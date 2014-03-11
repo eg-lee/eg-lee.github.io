@@ -1,0 +1,28 @@
+// Your custom SCSS should be written here...
+* {
+  background: rgba(0,0,0,.05);
+}
+
+.main {
+  @include row();
+    .module-container {
+	  @include column(6);
+	  .module-action {
+	    //padding-bottom: 10px;
+	    //padding-top: 5px;
+	    //height: 180px;
+	    border-bottom: 1px solid #000;
+	    div.valign::before {
+	    	height: 200px;
+	    }
+	      ul {
+	        li {
+	        	padding-bottom: 0;
+	        }
+	      }
+	  }
+
+	}
+}
+
+

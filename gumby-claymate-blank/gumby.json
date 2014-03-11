@@ -1,0 +1,14 @@
+{
+	"build": {
+		"gumbyPath": "bower_components/gumby",
+		"outPath": "js"/*,
+		"modules": [
+			"fixed",
+			"navbar",
+			"tabs"
+		],
+		"addons": [
+			"bower_components/path-to-addon/addon.js"
+		]*/
+	}
+}
