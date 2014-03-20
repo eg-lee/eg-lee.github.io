@@ -1,0 +1,584 @@
+/*
+  * _custom.scss
+  * SASS styling for Agents Online
+  * Create Date: 03/10/2014
+  * Author: Edward G. Lee
+*/
+
+/* Contents
+==================================================
+  Color For Development
+  Media Query For Wide Screens
+  Variables
+  Mixins
+  Icon Font
+  Header
+  Navigation
+  Main Content
+  Modules
+*/
+
+/* Color For Development
+================================================== */
+/*
+* {
+  background: rgba(0,0,0,.05);
+}
+$color-structure-border: $body-font-color;
+*/
+$color-structure-border: #d1d2d1;
+
+/* Media Query For Wide Screens
+================================================== */
+
+/* extend max-row-width for wide screens */
+/*@include respond("min-width: 1441px") {
+	$row-max-width: 1280px;
+}*/
+
+/* Variables
+================================================== */
+
+$color-get-quotes: #00529F;
+$color-recent-activity: #0081C3;
+$color-endorse-or-cancel: #00A7E1;
+$color-make-payments: #6EC4E8;
+$color-access-policy-info: #48D2CB;
+$color-access-claims-info: #00BBB3;
+$color-order-reports: #00BC6F;
+$color-view-manuals: #00953A;
+$color-welcome-user-name: #f7941e;
+$color-text-size: $color-endorse-or-cancel;
+$color-my-contacts: $color-get-quotes;
+$color-my-profile: $color-recent-activity;
+$color-help: $color-endorse-or-cancel;
+$color-sign-out: $color-access-policy-info;
+$padding-nav-a: 22px;
+
+/* Mixins
+================================================== */
+
+@mixin padding-left-right($length) {
+  padding-left: $length;
+  padding-right: $length;
+}
+
+@mixin border-top-bottom($width, $color) {
+  border-top: $width solid $color;
+  border-bottom: $width solid $color; 
+}
+
+.icon-font {
+  display: inline-block;
+  font-family: $font-family-icon !important;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+/* Icon Font
+================================================== */
+
+.icon-font-get-quotes:before { @extend .icon-font; content: "\0041"; } // A
+.icon-font-recent-activity:before { @extend .icon-font; content: "\0042"; }
+.icon-font-endorse-or-cancel:before  { @extend .icon-font; content: "\0043"; }
+.icon-font-make-payments:before { @extend .icon-font; content: "\0044"; }
+.icon-font-access-policy-info:before { @extend .icon-font; content: "\0045"; } 
+.icon-font-access-claims-info:before { @extend .icon-font; content: "\0046"; }
+.icon-font-order-reports:before { @extend .icon-font; content: "\0047"; }
+.icon-font-view-manuals:before { @extend .icon-font; content: "\0048"; } // H
+
+/* Header
+================================================== */
+
+.header-row {
+  @include row();
+
+  margin-top: 10px;
+
+  .logo-wn {
+    @include hybrid(11);
+
+    @include respond("all-phones") { // mobile view
+      text-align: center;
+    }
+  } // logo-wn
+
+  .logo-ao {
+  	@include hybrid(11);
+  	@include pull(1, hybrid);
+
+  	text-align: right;
+
+  	p {
+  	  margin-bottom: 10px; 
+  	  font-size: 11px;
+  	}
+
+  	@include respond("max-width: 768px") { // premature mobile view, aligns left
+      p {
+      	text-align: right;
+      }
+    }
+
+    @include respond("all-phones") { // mobile view
+      text-align: center;
+      p {
+      	text-align: center;
+      }
+    }
+  } // logo-ao
+} // header-row
+
+
+/* Navigation
+================================================== */
+
+.nav-row {
+  @include row();
+  
+  margin-bottom: 10px;
+  padding-top: 4px;
+  
+  .nav-container {
+    @include row('nested'); // nested to remove additional left/right padding
+  	@include border-top-bottom(1px, $color-structure-border);
+
+  	padding-top: 4px;
+  	font-weight: 500;
+
+  	@include respond(all-phones) {
+  	  padding-top: 10px;
+  	}	
+   } // nav-container
+} // nav-row
+
+.welcome-user {
+  @include hybrid(7);
+
+  span {
+    padding-left: 10px;
+    color: $color-welcome-user-name;
+    @include respond("max-width: 560px") {
+      //padding-left: 10px; //change to padding
+    }
+  }
+
+  @include respond(all-phones) {
+    width: 50%;
+    font-size: 16px;
+    line-height: 39px;
+  }
+} // welcome-user
+
+.text-size {
+  @include hybrid(5);
+  @include push(1, hybrid);
+
+  //float: left;
+  
+  //margin-left: 45px;
+
+  .text-size-heading {
+    color: $color-text-size;
+    float: left;
+  }
+
+  span {
+    float: left;
+  }
+
+  .text-size-char-container {
+	float: left;
+
+    display: block;
+	height: 25px;
+	//width: 75px;
+
+    & div {
+      float: left;
+      
+      height: 17px;
+      //width: 30px;
+      margin-top: 4px;
+      @include padding-left-right(8px);
+      
+      &.normal {
+        border-right: 1px solid $color-structure-border;
+    	line-height: 18px;
+      }
+      &.medium {
+        border-right: 1px solid $color-structure-border;
+    	font-size: 16px;
+    	span {
+    	  //margin-top: -1px;
+    	  line-height: 17px;
+
+    	}
+      }
+      &.large {
+        font-size: 18px;
+    	span {
+    	  //margin-top: -2px;
+    	  line-height: 15px;
+    	}
+      }
+    } // div for char
+  } // text-size-container
+
+  @include respond(all-phones) {
+    display: none;
+  }
+} // text-size
+
+#nav-mobile {
+  display: none;
+
+  @include respond(all-phones) {
+  	float: right;
+    position: relative; 
+
+    display: block; 
+    width: 50%; 
+    margin-bottom: 10px;
+    padding-right: 10px;
+
+    #nav-icon {
+      float: right;
+
+      padding: 7px 8px;
+      border-radius: 8px;
+
+      background-color: $color-get-quotes;
+      color: #fff;
+      
+      font-size: $xlarge;
+
+      cursor: pointer;
+
+    }
+  }
+
+  @include respond("max-width: 560px") {
+  	padding-right: 10px;
+  }
+} // nav-mobile
+
+.nav-main {
+  @include hybrid(11);
+  @include pull(1, hybrid);
+
+  ul {
+    float: right;
+	margin-bottom: 0;
+    li {
+      display: inline;
+      padding-bottom: 0;
+      border-right: 1px solid $color-structure-border;
+
+      @include respond(all-phones) {
+  		width: 100%;
+  		display: block;
+  		border-right: none;
+  		padding: 5px 0;
+  		border-top: 1px solid $color-structure-border;
+
+  		text-align: center;
+  	  }
+      a {
+        display: inline-block;
+	    //padding-left: 22px;
+	    //padding-right: 22px;.
+	    margin-right: -.26em;
+
+	    @include padding-left-right($padding-nav-a); // 22px
+
+	    text-decoration: none;
+
+	    @include respond("max-width: 975px") {
+	      @include padding-left-right($padding-nav-a - 2px); // 20px
+	    } 
+	    @include respond("max-width: 939px") {
+	      @include padding-left-right($padding-nav-a - 4px); // 18px
+	    }
+	    @include respond("max-width: 903px") {
+	      @include padding-left-right($padding-nav-a - 6px); // 16px
+	    }
+	    @include respond("max-width: 867px") {
+	      @include padding-left-right($padding-nav-a - 8px); // 14px
+	    }
+	    @include respond("max-width: 832px") {
+	      @include padding-left-right($padding-nav-a - 10px); // 12px
+	    }
+	    @include respond("max-width: 796px") {
+	      @include padding-left-right($padding-nav-a - 12px); // 10px
+	    }
+	    @include respond(all-phones) {
+	  	  width: 100%;
+	    }
+      } // a
+
+      &.my-contacts {
+        a {
+          color: $color-my-contacts; 	
+        }
+      } // li.my-contacts
+
+      &.my-profile {
+        a {
+          color: $color-my-profile; 	
+        }
+      } // li.my-profile
+      &.help {
+        a {
+          color: $color-help; 	
+        }
+      } // li.help
+      &.sign-out {
+        border-right: none;
+        a {
+          color: $color-sign-out; 	
+        }
+      } // li.sign-out
+    } // li
+
+    @include respond(all-phones) {
+      @include column(12);
+
+      display: none; // hide nav by default
+	  height: auto;  
+    }
+   } // ul
+} // nav-main
+
+/* Main Content
+================================================== */
+
+.main-row {
+  @include row();
+  	.module-container-right {
+  	  @include push(2, hybrid);
+  	}
+    .module-container {
+	  @include hybrid(11);
+	} // module-container
+} // main-row
+
+
+/* Modules
+================================================== */
+
+.module {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $color-structure-border;
+
+  .module-heading {
+    font-size: 16px;
+  }
+
+  .module-icon {
+	height: 90px;
+	width: 90px;
+	margin-left: -90px; //new
+	border-radius: 10px;
+
+  	text-align: center;
+
+	  i:before {
+	    font-size: $reallybig;
+	    color: #fff;
+	    line-height: .45;
+	  }
+	}
+
+	/* modify default valign properties */
+	.module-valign {
+	  padding-left: 90px;
+	  height: auto;
+	}
+
+	.module-valign:before {
+	  height: 150px;
+
+	  /* modify height on screen width change, to keep module's inline */
+	  @include respond("max-width: 807px") {
+	    height: 180px
+	  }
+	  @include respond("max-width: 779px") {
+	    height: 190px
+	  }
+	  @include respond("max-width: 769px") {
+	    height: 235px
+	  }
+	  @include respond("all-phones") { // mobile view
+	    height: 150px
+	  }
+    }
+
+    .module-list-actions-container {
+      width: 98%;
+
+	  @include respond("max-width: 947px") {
+        width: 96%; // keep ul from breaking out of line in firefox
+	  }
+    }
+	
+	.module-list-actions {
+	  position: relative; //new
+      display: inline-block; //new
+      width: auto; //auto
+      height: auto;
+
+	    li {
+	      position: relative;
+
+	      dislpay: inline-block; //new
+	      overflow: visible;
+	      padding-bottom: 0;
+	      padding-left: 20px;
+	      
+	      
+	      color: $body-font-color;
+
+	      line-height: $norm + 7px;
+	        a {
+	          color: $body-font-color;
+	        }
+	      }
+
+	    li:before {
+	      position: absolute;
+	      left: 0;
+	      margin: 0 10px;
+	      font-size: $norm + 1px;
+	      content: '\2022'; //bullet
+	    }
+	} // module-list-actions
+} // module
+
+
+.module-one {
+  @extend .module;
+  margin-top: 0;
+  color: $color-get-quotes;
+  .module-icon {
+    background-color: $color-get-quotes;
+  }
+  .module-list-actions {
+    li:before {
+	  color: $color-get-quotes;
+    }
+  }
+}
+
+.module-two {
+  @extend .module;
+  color: $color-recent-activity;
+  .module-icon {
+	@extend .module-icon;
+	background-color: $color-recent-activity;
+  }
+  .module-list-actions {
+    li:before {
+	  color: $color-get-quotes;
+    }
+  }	
+}
+
+.module-three {
+  @extend .module;
+  color: $color-endorse-or-cancel;
+  .module-icon {
+    @extend .module-icon;
+	background-color: $color-endorse-or-cancel;
+  }
+  .module-list-actions {
+	li:before {
+	  color: $color-endorse-or-cancel;
+    }
+  }	  	
+}
+
+.module-four {
+  @extend .module;
+  border: 0;
+  color: $color-make-payments;
+  
+  @include respond("all-phones") {
+    border-bottom: 1px solid $color-structure-border;
+  }
+  .module-icon {
+    @extend .module-icon;
+	background-color: $color-make-payments;
+  }
+  .module-list-actions {
+    li:before {
+	  color: $color-make-payments;
+    }
+  }	  	
+}
+
+.module-five {
+  @extend .module;
+  margin-top: 0;
+  color: $color-access-policy-info;
+  @include respond("all-phones") {
+    margin-top: 10px;
+  }
+  .module-icon {
+	@extend .module-icon;
+	background-color: $color-access-policy-info;
+  }
+  .module-list-actions {
+    li:before {
+	  color: $color-access-policy-info;
+    }
+  }	  	
+}
+
+.module-six {
+  @extend .module;
+  color: $color-access-claims-info;
+  .module-icon {
+    @extend .module-icon;
+	background-color: $color-access-claims-info;
+  }
+  .module-list-actions {
+    li:before {
+	  color: $color-access-claims-info;
+    }
+  }	  	
+}
+
+.module-seven {
+  @extend .module;
+  color: $color-order-reports;
+  .module-icon {
+    @extend .module-icon;
+    background-color: $color-order-reports;
+  }
+  .module-list-actions {
+    li:before {
+	  color: $color-order-reports;
+    }
+  }	  	
+}
+
+.module-eight {
+  @extend .module;
+  border: 0;
+  color: $color-view-manuals;
+  .module-icon {
+	@extend .module-icon;
+	background-color: $color-view-manuals;
+  }
+  .module-list-actions {
+    li:before {
+	  color: $color-view-manuals;
+    }
+  } 	
+}
