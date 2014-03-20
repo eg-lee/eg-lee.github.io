@@ -20,8 +20,8 @@
 
 /* Color For Development
 ================================================== */
-/*
-* {
+
+/** {
   background: rgba(0,0,0,.05);
 }
 $color-structure-border: $body-font-color;
@@ -114,7 +114,8 @@ $padding-nav-a: 22px;
   	text-align: right;
 
   	p {
-  	  margin-bottom: 10px; 
+  	  // /margin-bottom: 10px; // old 
+  	  margin-bottom: 0px; // new 3-20
   	  font-size: 11px;
   	}
 
@@ -140,7 +141,8 @@ $padding-nav-a: 22px;
 .nav-row {
   @include row();
   
-  margin-bottom: 10px;
+  //margin-bottom: 10px; // old
+  margin-bottom: 20px; // new 3-20
   padding-top: 4px;
   
   .nav-container {
@@ -364,6 +366,7 @@ $padding-nav-a: 22px;
   	}
     .module-container {
 	  @include hybrid(11);
+
 	} // module-container
 } // main-row
 
@@ -372,8 +375,10 @@ $padding-nav-a: 22px;
 ================================================== */
 
 .module {
-  margin-top: 10px;
-  padding-bottom: 10px;
+  //margin-top: 10px; // old
+  //padding-bottom: 10px; // old
+  margin-top: 25px; // new 3-20
+  //padding-bottom: 5px; // new 3-20
   border-bottom: 1px solid $color-structure-border;
 
   .module-heading {
@@ -383,7 +388,7 @@ $padding-nav-a: 22px;
   .module-icon {
 	height: 90px;
 	width: 90px;
-	margin-left: -90px; //new
+	margin-left: -90px;
 	border-radius: 10px;
 
   	text-align: center;
@@ -399,12 +404,18 @@ $padding-nav-a: 22px;
 	.module-valign {
 	  padding-left: 90px;
 	  height: auto;
+	  border-top: 1px solid $color-structure-border; // new 3-20
 	}
 
 	.module-valign:before {
-	  height: 150px;
+	  //height: 150px; // old
+	  height: 135px; // new 3-20
 
 	  /* modify height on screen width change, to keep module's inline */
+	  @include respond("max-width: 908px") {
+	    height: 150px; 
+	    margin-top: 5px;
+	  } // new 3-20
 	  @include respond("max-width: 807px") {
 	    height: 180px
 	  }
