@@ -96,11 +96,15 @@ $padding-nav-a: 22px;
 
 .header-row {
   @include row();
-
   margin-top: 10px;
 
   .logo-wn {
     @include hybrid(11);
+
+    img {
+      height: 83px;
+      width: 145px;
+    }
 
     @include respond("all-phones") { // mobile view
       text-align: center;
@@ -110,7 +114,6 @@ $padding-nav-a: 22px;
   .logo-ao {
   	@include hybrid(11);
   	@include pull(1, hybrid);
-
   	text-align: right;
 
   	p {
@@ -127,6 +130,7 @@ $padding-nav-a: 22px;
 
     @include respond("all-phones") { // mobile view
       text-align: center;
+
       p {
       	text-align: center;
       }
@@ -140,7 +144,6 @@ $padding-nav-a: 22px;
 
 .nav-row {
   @include row();
-  
   //margin-bottom: 10px; // old
   margin-bottom: 20px; // new 3-20
   padding-top: 4px;
@@ -148,7 +151,6 @@ $padding-nav-a: 22px;
   .nav-container {
     @include row('nested'); // nested to remove additional left/right padding
   	@include border-top-bottom(1px, $color-structure-border);
-
   	padding-top: 4px;
   	font-weight: 500;
 
@@ -179,9 +181,7 @@ $padding-nav-a: 22px;
 .text-size {
   @include hybrid(5);
   @include push(1, hybrid);
-
   //float: left;
-  
   //margin-left: 45px;
 
   .text-size-heading {
@@ -195,14 +195,12 @@ $padding-nav-a: 22px;
 
   .text-size-char-container {
 	float: left;
-
     display: block;
 	height: 25px;
 	//width: 75px;
 
     & div {
       float: left;
-      
       height: 17px;
       //width: 30px;
       margin-top: 4px;
@@ -212,17 +210,20 @@ $padding-nav-a: 22px;
         border-right: 1px solid $color-structure-border;
     	line-height: 18px;
       }
+
       &.medium {
         border-right: 1px solid $color-structure-border;
     	font-size: 16px;
+
     	span {
     	  //margin-top: -1px;
     	  line-height: 17px;
-
     	}
       }
+
       &.large {
         font-size: 18px;
+    
     	span {
     	  //margin-top: -2px;
     	  line-height: 15px;
@@ -242,7 +243,6 @@ $padding-nav-a: 22px;
   @include respond(all-phones) {
   	float: right;
     position: relative; 
-
     display: block; 
     width: 50%; 
     margin-bottom: 10px;
@@ -250,17 +250,12 @@ $padding-nav-a: 22px;
 
     #nav-icon {
       float: right;
-
       padding: 7px 8px;
       border-radius: 8px;
-
       background-color: $color-get-quotes;
       color: #fff;
-      
       font-size: $xlarge;
-
       cursor: pointer;
-
     }
   }
 
@@ -276,6 +271,7 @@ $padding-nav-a: 22px;
   ul {
     float: right;
 	margin-bottom: 0;
+
     li {
       display: inline;
       padding-bottom: 0;
@@ -290,14 +286,13 @@ $padding-nav-a: 22px;
 
   		text-align: center;
   	  }
+
       a {
         display: inline-block;
 	    //padding-left: 22px;
 	    //padding-right: 22px;.
 	    margin-right: -.26em;
-
 	    @include padding-left-right($padding-nav-a); // 22px
-
 	    text-decoration: none;
 
 	    @include respond("max-width: 975px") {
@@ -334,13 +329,16 @@ $padding-nav-a: 22px;
           color: $color-my-profile; 	
         }
       } // li.my-profile
+
       &.help {
         a {
           color: $color-help; 	
         }
       } // li.help
+
       &.sign-out {
         border-right: none;
+
         a {
           color: $color-sign-out; 	
         }
@@ -349,7 +347,6 @@ $padding-nav-a: 22px;
 
     @include respond(all-phones) {
       @include column(12);
-
       display: none; // hide nav by default
 	  height: auto;  
     }
@@ -390,7 +387,6 @@ $padding-nav-a: 22px;
 	width: 90px;
 	margin-left: -90px;
 	border-radius: 10px;
-
   	text-align: center;
 
 	  i:before {
