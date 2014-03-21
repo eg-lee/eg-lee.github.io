@@ -101,11 +101,6 @@ $padding-nav-a: 22px;
   .logo-wn {
     @include hybrid(11);
 
-    img {
-      height: 83px;
-      width: 145px;
-    }
-
     @include respond("all-phones") { // mobile view
       text-align: center;
     }
@@ -179,10 +174,11 @@ $padding-nav-a: 22px;
 } // welcome-user
 
 .text-size {
-  @include hybrid(5);
-  @include push(1, hybrid);
+  @include hybrid(4);
+  @include push(2, hybrid);
   //float: left;
   //margin-left: 45px;
+
 
   .text-size-heading {
     color: $color-text-size;
@@ -267,6 +263,7 @@ $padding-nav-a: 22px;
 .nav-main {
   @include hybrid(11);
   @include pull(1, hybrid);
+  margin-left: 0;
 
   ul {
     float: right;
@@ -392,7 +389,8 @@ $padding-nav-a: 22px;
 	  i:before {
 	    font-size: $reallybig;
 	    color: #fff;
-	    line-height: .45;
+	    line-height: 1;
+	    margin-top: -27px;
 	  }
 	}
 

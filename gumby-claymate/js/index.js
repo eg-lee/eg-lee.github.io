@@ -21,9 +21,6 @@ $( document ).ready(function() {
       }  
 	}); 
 
-    if (!Modernizer.svg) {
-      $('.logo-wn img').attr('src', 'img/western-national-logo.png');
-    }
 
   /*$list.width($valign.width() - 5);
   $icon.css('margin-top', (($valign.height() - 90) / 2) + 'px');

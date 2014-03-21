@@ -2085,7 +2085,6 @@ $color-structure-border: $body-font-color;
 @media only screen and (max-width: 767px) { .header-row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
 .header-row .logo-wn { width: 44.70486%; }
 @media only screen and (max-width: 767px) { .header-row .logo-wn { float: left; margin-left: 0; width: 100%; } }
-.header-row .logo-wn img { height: 83px; width: 145px; }
 @media only screen and (max-width: 767px) { .header-row .logo-wn { text-align: center; } }
 .header-row .logo-ao { width: 44.70486%; text-align: right; }
 @media only screen and (max-width: 767px) { .header-row .logo-ao { float: left; margin-left: 0; width: 100%; } }
@@ -2109,9 +2108,9 @@ $color-structure-border: $body-font-color;
 .welcome-user span { padding-left: 10px; color: #f7941e; }
 @media only screen and (max-width: 767px) { .welcome-user { width: 50%; font-size: 16px; line-height: 39px; } }
 
-.text-size { width: 19.18403%; margin-left: 6.33681%; }
+.text-size { width: 14.93056%; margin-left: 10.59028%; }
 @media only screen and (max-width: 767px) { .text-size { float: left; margin-left: 0; width: 100%; } }
-.text-size:first-child { margin-left: 4.25347%; }
+.text-size:first-child { margin-left: 8.50694%; }
 @media only screen and (max-width: 767px) { .text-size { margin-left: 0; }
   .text-size:first-child { margin-left: 0; } }
 .text-size .text-size-heading { color: #00a7e1; float: left; }
@@ -2130,7 +2129,7 @@ $color-structure-border: $body-font-color;
   #nav-mobile #nav-icon { float: right; padding: 7px 8px; border-radius: 8px; background-color: #00529f; color: #fff; font-size: 37px; cursor: pointer; } }
 @media only screen and (max-width: 560px) { #nav-mobile { padding-right: 10px; } }
 
-.nav-main { width: 44.70486%; }
+.nav-main { width: 44.70486%; margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-main { float: left; margin-left: 0; width: 100%; } }
 .nav-main ul { float: right; margin-bottom: 0; }
 .nav-main ul li { display: inline; padding-bottom: 0; border-right: 1px solid #d1d2d1; }
@@ -2168,7 +2167,7 @@ $color-structure-border: $body-font-color;
 .module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { margin-top: 25px; border-bottom: 1px solid #d1d2d1; /* modify default valign properties */ }
 .module .module-heading, .module-one .module-heading, .module-two .module-heading, .module-three .module-heading, .module-four .module-heading, .module-five .module-heading, .module-six .module-heading, .module-seven .module-heading, .module-eight .module-heading { font-size: 16px; }
 .module .module-icon, .module-one .module-icon, .module-two .module-icon, .module-three .module-icon, .module-four .module-icon, .module-five .module-icon, .module-six .module-icon, .module-seven .module-icon, .module-eight .module-icon { height: 90px; width: 90px; margin-left: -90px; border-radius: 10px; text-align: center; }
-.module .module-icon i:before, .module-one .module-icon i:before, .module-two .module-icon i:before, .module-three .module-icon i:before, .module-four .module-icon i:before, .module-five .module-icon i:before, .module-six .module-icon i:before, .module-seven .module-icon i:before, .module-eight .module-icon i:before { font-size: 96px; color: #fff; line-height: .45; }
+.module .module-icon i:before, .module-one .module-icon i:before, .module-two .module-icon i:before, .module-three .module-icon i:before, .module-four .module-icon i:before, .module-five .module-icon i:before, .module-six .module-icon i:before, .module-seven .module-icon i:before, .module-eight .module-icon i:before { font-size: 96px; color: #fff; line-height: 1; margin-top: -27px; }
 .module .module-valign, .module-one .module-valign, .module-two .module-valign, .module-three .module-valign, .module-four .module-valign, .module-five .module-valign, .module-six .module-valign, .module-seven .module-valign, .module-eight .module-valign { padding-left: 90px; height: auto; border-top: 1px solid #d1d2d1; }
 .module .module-valign:before, .module-one .module-valign:before, .module-two .module-valign:before, .module-three .module-valign:before, .module-four .module-valign:before, .module-five .module-valign:before, .module-six .module-valign:before, .module-seven .module-valign:before, .module-eight .module-valign:before { height: 135px; /* modify height on screen width change, to keep module's inline */ }
 @media only screen and (max-width: 908px) { .module .module-valign:before, .module-one .module-valign:before, .module-two .module-valign:before, .module-three .module-valign:before, .module-four .module-valign:before, .module-five .module-valign:before, .module-six .module-valign:before, .module-seven .module-valign:before, .module-eight .module-valign:before { height: 150px; margin-top: 5px; } }
