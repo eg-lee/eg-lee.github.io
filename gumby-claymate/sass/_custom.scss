@@ -21,12 +21,12 @@
 /* Color For Development
 ================================================== */
 
-/** {
+* {
   background: rgba(0,0,0,.05);
 }
 $color-structure-border: $body-font-color;
-*/
-$color-structure-border: #d1d2d1;
+
+//$color-structure-border: #d1d2d1;
 
 /* Media Query For Wide Screens
 ================================================== */
@@ -207,36 +207,55 @@ $padding-nav-a: 22px;
   //@include push(2, hybrid); // old
   //float: left;
   margin-left: 40px;
-
-  @include respond("max-width: 985px") {
+  
+  @include respond("max-width: 997px") {
     margin-left: 35px;
   }
-  @include respond("max-width: 941px") {
+
+  @include respond("max-width: 994px") {
     margin-left: 30px;
   }
 
-  @include respond("max-width: 909px") {
-    margin-left: 28px;
+  @include respond("max-width: 981px") {
+    margin-left: 22px;
   }
 
-  @include respond("max-width: 878px") {
-    margin-left: 23px;
+
+  @include respond("max-width: 958px") {
+    margin-left: 25px;
+  }
+
+  @include respond("max-width: 951px") {
+    margin-left: 20px;
+  }
+
+
+
+  @include respond("max-width: 879px") {
+    margin-left: 16px;
   }
 
   @include respond("max-width: 871px") {
-    margin-left: 18px;
+    margin-left: 14px;
+  }
+
+  @include respond("max-width: 841px") {
+    margin-left: 12px;
   }
 
   @include respond("max-width: 838px") {
-    margin-left: 15px;
+    margin-left: 10px;
   }
-
-  @include respond("max-width: 806px") {
-    margin-left: 9px;
-  }
-
-  @include respond("max-width: 771px") {
+    @include respond("max-width: 809px") {
     margin-left: 8px;
+  }
+      @include respond("max-width: 806px") {
+    margin-left: 6px;
+  }
+
+
+  @include respond("max-width: 770px") {
+    margin-left: 4px;
   }
 
   .text-size-heading {
@@ -265,7 +284,7 @@ $padding-nav-a: 22px;
         @include padding-left-right(6px);	
       }
 
-      @include respond("max-width: 771px") {
+      @include respond("max-width: 838px") {
         @include padding-left-right(5px);	
       }
       
