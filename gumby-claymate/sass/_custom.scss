@@ -21,12 +21,12 @@
 /* Color For Development
 ================================================== */
 
-* {
+/** {
   background: rgba(0,0,0,.05);
 }
 $color-structure-border: $body-font-color;
-
-//$color-structure-border: #d1d2d1;
+*/
+$color-structure-border: #d1d2d1;
 
 /* Media Query For Wide Screens
 ================================================== */
@@ -61,6 +61,11 @@ $padding-nav-a: 22px;
 @mixin padding-left-right($length) {
   padding-left: $length;
   padding-right: $length;
+}
+
+@mixin padding-top-bottom($length) {
+  padding-top: $length;
+  padding-bottom: $length;
 }
 
 @mixin border-top-bottom($width, $color) {
@@ -105,7 +110,7 @@ $padding-nav-a: 22px;
     img {
   	  //height: 83px;
   	  //width: 145px;
-  	  max-height: 99%;
+  	  max-height: 99%; // keep retina images scaled correctly
   	}
 
     @include respond("all-phones") { // mobile view
@@ -120,7 +125,7 @@ $padding-nav-a: 22px;
   	text-align: right;
 
   	img {
-  	  max-height: 99%;
+  	  max-height: 99%; // keep retina images scaled correctly
   	}
 
   	p {
@@ -154,6 +159,10 @@ $padding-nav-a: 22px;
   //margin-bottom: 10px; // old
   margin-bottom: 20px; // new 3-20
   padding-top: 4px;
+
+  @include respond(all-phones) {
+    margin-bottom: 10px;
+  }
   
   .nav-container {
     @include row('nested'); // nested to remove additional left/right padding
@@ -162,7 +171,7 @@ $padding-nav-a: 22px;
   	font-weight: 500;
 
   	@include respond(all-phones) {
-  	  padding-top: 10px;
+  	  @include padding-top-bottom(5px);
   	}	
    } // nav-container
 } // nav-row
@@ -179,18 +188,48 @@ $padding-nav-a: 22px;
   }
 
   @include respond(all-phones) {
-    width: 50%;
+    width: 75%;
     font-size: 16px;
     line-height: 39px;
   }
 } // welcome-user
 
 .text-size {
-  @include hybrid(4);
-  @include push(2, hybrid);
+  //@include hybrid(4); // old
+  //@include push(2, hybrid); // old
   //float: left;
-  //margin-left: 45px;
+  margin-left: 40px;
 
+  @include respond("max-width: 985px") {
+    margin-left: 35px;
+  }
+  @include respond("max-width: 941px") {
+    margin-left: 30px;
+  }
+
+  @include respond("max-width: 909px") {
+    margin-left: 28px;
+  }
+
+  @include respond("max-width: 878px") {
+    margin-left: 23px;
+  }
+
+  @include respond("max-width: 871px") {
+    margin-left: 18px;
+  }
+
+  @include respond("max-width: 838px") {
+    margin-left: 15px;
+  }
+
+  @include respond("max-width: 806px") {
+    margin-left: 9px;
+  }
+
+  @include respond("max-width: 771px") {
+    margin-left: 8px;
+  }
 
   .text-size-heading {
     color: $color-text-size;
@@ -212,7 +251,15 @@ $padding-nav-a: 22px;
       height: 17px;
       //width: 30px;
       margin-top: 4px;
-      @include padding-left-right(8px);
+      @include padding-left-right(7px);
+
+      @include respond("max-width: 977px") {
+        @include padding-left-right(6px);	
+      }
+
+      @include respond("max-width: 771px") {
+        @include padding-left-right(5px);	
+      }
       
       &.normal {
         border-right: 1px solid $color-structure-border;
@@ -252,14 +299,15 @@ $padding-nav-a: 22px;
   	float: right;
     position: relative; 
     display: block; 
-    width: 50%; 
-    margin-bottom: 10px;
+    width: 25%; 
+    //margin-bottom: 10px;
     padding-right: 10px;
 
     #nav-icon {
       float: right;
       padding: 7px 8px;
       border-radius: 8px;
+      //behavior: url(js/pie/PIE.htc); // for border radius in IE8
       background-color: $color-get-quotes;
       color: #fff;
       font-size: $xlarge;
@@ -273,7 +321,7 @@ $padding-nav-a: 22px;
 } // nav-mobile
 
 .nav-main {
-  @include hybrid(11);
+  @include hybrid(15);
   @include pull(1, hybrid);
   margin-left: 0;
 
@@ -396,6 +444,7 @@ $padding-nav-a: 22px;
 	width: 90px;
 	margin-left: -90px;
 	border-radius: 10px;
+	behavior: url(js/pie/PIE.htc); // for border radius in IE8
   	text-align: center;
 
 	  i:before {
@@ -522,7 +571,7 @@ $padding-nav-a: 22px;
 
 .module-four {
   @extend .module;
-  border: 0;
+  //border: 0; // old
   color: $color-make-payments;
   
   @include respond("all-phones") {
@@ -587,7 +636,7 @@ $padding-nav-a: 22px;
 
 .module-eight {
   @extend .module;
-  border: 0;
+  //border: 0; // old
   color: $color-view-manuals;
   .module-icon {
 	@extend .module-icon;
