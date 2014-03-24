@@ -662,7 +662,7 @@ html, body { height: 100%; }
 
 @font-face { font-family: "Locator Web"; font-style: italic; font-weight: 400; src: url(../fonts/locator-web/eot/locator-web-bold-italic.eot); src: url("../fonts/locator-web/eot/locator-web-bold-italic.eot?#iefix") format("ie9-skip-eot"), url("../fonts/locator-web/woff/locator-web-bold-italic.woff") format("woff"); }
 
-@font-face { font-family: "WN AO Icon Font"; font-style: normal; font-weight: 400; src: url(../fonts/icons/wn-ao-icon-font-regular.eot); src: url("../fonts/icons/wn-ao-icon-font-regular.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/wn-ao-icon-font-regular.woff") format("woff"); }
+@font-face { font-family: "WN AO Icon Font"; font-style: normal; font-weight: 400; src: url(../fonts/icons/icomoon.eot); src: url("../fonts/icons/icomoon.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/icomoon.woff") format("woff"), url("../fonts/icons/icomoon.ttf") format("truetype"), url("../fonts/icons/icomoon.svg") format("svg"); }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 { font-family: "Locator Web"; font-weight: 300; color: #444444; text-rendering: optimizeLegibility; padding-top: 0.312em; line-height: 1.32043em; padding-bottom: 0.312em; }
@@ -2098,6 +2098,10 @@ $color-structure-border: $body-font-color;
 
 /* Navigation
 ================================================== */
+.nav-remove-padding { padding-bottom: 0; }
+
+.nav-add-margin { margin-top: 5px; }
+
 .nav-row { width: 100%; max-width: 1000px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; margin-bottom: 20px; padding-top: 4px; }
 .nav-row > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
@@ -2177,7 +2181,7 @@ $color-structure-border: $body-font-color;
 .module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { margin-top: 25px; border-bottom: 1px solid #d1d2d1; /* modify default valign properties */ }
 .module .module-heading, .module-one .module-heading, .module-two .module-heading, .module-three .module-heading, .module-four .module-heading, .module-five .module-heading, .module-six .module-heading, .module-seven .module-heading, .module-eight .module-heading { font-size: 16px; }
 .module .module-icon, .module-one .module-icon, .module-two .module-icon, .module-three .module-icon, .module-four .module-icon, .module-five .module-icon, .module-six .module-icon, .module-seven .module-icon, .module-eight .module-icon { height: 90px; width: 90px; margin-left: -90px; border-radius: 10px; behavior: url(js/pie/PIE.htc); text-align: center; }
-.module .module-icon i:before, .module-one .module-icon i:before, .module-two .module-icon i:before, .module-three .module-icon i:before, .module-four .module-icon i:before, .module-five .module-icon i:before, .module-six .module-icon i:before, .module-seven .module-icon i:before, .module-eight .module-icon i:before { font-size: 96px; color: #fff; line-height: 1; margin-top: -27px; }
+.module .module-icon i:before, .module-one .module-icon i:before, .module-two .module-icon i:before, .module-three .module-icon i:before, .module-four .module-icon i:before, .module-five .module-icon i:before, .module-six .module-icon i:before, .module-seven .module-icon i:before, .module-eight .module-icon i:before { font-size: 48px; color: #fff; line-height: 96px; }
 .module .module-valign, .module-one .module-valign, .module-two .module-valign, .module-three .module-valign, .module-four .module-valign, .module-five .module-valign, .module-six .module-valign, .module-seven .module-valign, .module-eight .module-valign { padding-left: 90px; height: auto; border-top: 1px solid #d1d2d1; }
 .module .module-valign:before, .module-one .module-valign:before, .module-two .module-valign:before, .module-three .module-valign:before, .module-four .module-valign:before, .module-five .module-valign:before, .module-six .module-valign:before, .module-seven .module-valign:before, .module-eight .module-valign:before { height: 135px; /* modify height on screen width change, to keep module's inline */ }
 @media only screen and (max-width: 908px) { .module .module-valign:before, .module-one .module-valign:before, .module-two .module-valign:before, .module-three .module-valign:before, .module-four .module-valign:before, .module-five .module-valign:before, .module-six .module-valign:before, .module-seven .module-valign:before, .module-eight .module-valign:before { height: 150px; margin-top: 5px; } }

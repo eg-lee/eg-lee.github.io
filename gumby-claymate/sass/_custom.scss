@@ -154,6 +154,14 @@ $padding-nav-a: 22px;
 /* Navigation
 ================================================== */
 
+.nav-remove-padding {
+  padding-bottom: 0;
+} // for jquery toggle
+
+.nav-add-margin {
+  margin-top: 5px;
+} // for jquery toggle
+
 .nav-row {
   @include row();
   //margin-bottom: 10px; // old
@@ -448,10 +456,10 @@ $padding-nav-a: 22px;
   	text-align: center;
 
 	  i:before {
-	    font-size: $reallybig;
+	    font-size: 48px;
 	    color: #fff;
-	    line-height: 1;
-	    margin-top: -27px;
+	    line-height: 96px;
+	    //margin-top: -27px;
 	  }
 	}
 

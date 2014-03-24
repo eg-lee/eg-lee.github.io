@@ -4,12 +4,16 @@ $( document ).ready(function() {
   var $list = $('ul.list-actions');
   var $icon = $('div.module-icon');
 
+  var $navContainer = $('.nav-container');
   var $navIcon = $('#nav-icon');  
   var $nav = $('.nav-main ul');  
-  var $navHeight = $navIcon.height();  
+  var $navHeight = $navIcon.height();
+  var navIsOpen = false;
   
     $($navIcon).on('click', function(e) {  
-        e.preventDefault();  
+        e.preventDefault(); 
+        $nav.toggleClass('nav-add-margin');
+        $navContainer.toggleClass('nav-remove-padding');
         $nav.slideToggle();  
     });  
 

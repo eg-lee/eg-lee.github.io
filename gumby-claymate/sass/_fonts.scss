@@ -80,10 +80,11 @@
   font-family: '#{$font-family-icon}';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/icons/#{$font-icon-regular}.eot);
-  src: url('../fonts/icons/#{$font-icon-regular}.eot?#iefix') format('ie9-skip-eot'),
-       url('../fonts/icons/#{$font-icon-regular}.woff') format('woff');//,
-       //url('../fonts/icons/#{$some-font-variable}.ttf')  format('truetype');
+  src: url(../fonts/icons/icomoon.eot);
+  src: url('../fonts/icons/icomoon.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/icons/icomoon.woff') format('woff'),
+       url('../fonts/icons/icomoon.ttf')  format('truetype'),
+       url('../fonts/icons/icomoon.svg')  format('svg');
 }
 
 
