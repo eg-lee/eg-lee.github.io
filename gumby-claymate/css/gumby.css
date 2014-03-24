@@ -2044,8 +2044,10 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 */
 /* Color For Development
 ================================================== */
-* { background: rgba(0, 0, 0, 0.05); }
-
+/** { background: rgba(0,0,0,.05);
+}
+$color-structure-border: $body-font-color;
+*/
 /* Media Query For Wide Screens
 ================================================== */
 /* extend max-row-width for wide screens */
@@ -2104,7 +2106,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 .nav-row > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
 @media only screen and (max-width: 767px) { .nav-row { margin-bottom: 10px; } }
-.nav-row .nav-container { width: auto; min-width: 0; max-width: none; padding-left: 0; padding-right: 0; border-top: 1px solid #555555; border-bottom: 1px solid #555555; padding-top: 4px; font-weight: 500; }
+.nav-row .nav-container { width: auto; min-width: 0; max-width: none; padding-left: 0; padding-right: 0; border-top: 1px solid #d1d2d1; border-bottom: 1px solid #d1d2d1; padding-top: 4px; font-weight: 500; }
 .nav-row .nav-container > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-row .nav-container { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
 @media only screen and (max-width: 767px) { .nav-row .nav-container { padding-top: 5px; padding-bottom: 5px; } }
@@ -2133,8 +2135,8 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 .text-size .text-size-char-container div { float: left; height: 17px; margin-top: 4px; padding-left: 7px; padding-right: 7px; }
 @media only screen and (max-width: 977px) { .text-size .text-size-char-container div { padding-left: 6px; padding-right: 6px; } }
 @media only screen and (max-width: 838px) { .text-size .text-size-char-container div { padding-left: 5px; padding-right: 5px; } }
-.text-size .text-size-char-container div.normal { border-right: 1px solid #555555; line-height: 18px; }
-.text-size .text-size-char-container div.medium { border-right: 1px solid #555555; font-size: 16px; }
+.text-size .text-size-char-container div.normal { border-right: 1px solid #d1d2d1; line-height: 18px; }
+.text-size .text-size-char-container div.medium { border-right: 1px solid #d1d2d1; font-size: 16px; }
 .text-size .text-size-char-container div.medium span { line-height: 17px; }
 .text-size .text-size-char-container div.large { font-size: 18px; }
 .text-size .text-size-char-container div.large span { line-height: 15px; }
@@ -2148,8 +2150,8 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 .nav-main { width: 61.71875%; margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-main { float: left; margin-left: 0; width: 100%; } }
 .nav-main ul { float: right; margin-bottom: 0; }
-.nav-main ul li { display: inline; padding-bottom: 0; border-right: 1px solid #555555; }
-@media only screen and (max-width: 767px) { .nav-main ul li { width: 100%; display: block; border-right: none; padding: 5px 0; border-top: 1px solid #555555; text-align: center; } }
+.nav-main ul li { display: inline; padding-bottom: 0; border-right: 1px solid #d1d2d1; }
+@media only screen and (max-width: 767px) { .nav-main ul li { width: 100%; display: block; border-right: none; padding: 5px 0; border-top: 1px solid #d1d2d1; text-align: center; } }
 .nav-main ul li a { display: inline-block; margin-right: -.26em; padding-left: 22px; padding-right: 22px; text-decoration: none; }
 @media only screen and (max-width: 975px) { .nav-main ul li a { padding-left: 20px; padding-right: 20px; } }
 @media only screen and (max-width: 939px) { .nav-main ul li a { padding-left: 18px; padding-right: 18px; } }
@@ -2180,7 +2182,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 
 /* Modules
 ================================================== */
-.module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { margin-top: 30px; border-bottom: 1px solid #555555; /* modify default valign properties */ }
+.module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { margin-top: 30px; border-bottom: 1px solid #d1d2d1; /* modify default valign properties */ }
 @media only screen and (max-width: 767px) { .module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { padding-bottom: 5px; } }
 .module .module-heading, .module-one .module-heading, .module-two .module-heading, .module-three .module-heading, .module-four .module-heading, .module-five .module-heading, .module-six .module-heading, .module-seven .module-heading, .module-eight .module-heading { font-size: 16px; }
 .module .module-icon, .module-one .module-icon, .module-two .module-icon, .module-three .module-icon, .module-four .module-icon, .module-five .module-icon, .module-six .module-icon, .module-seven .module-icon, .module-eight .module-icon { height: 90px; width: 90px; margin-left: -90px; border-radius: 10px; behavior: url(js/pie/PIE.htc); text-align: center; }
@@ -2212,7 +2214,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 .module-three .module-list-actions li:before { color: #00a7e1; }
 
 .module-four { border: 0; color: #6ec4e8; }
-@media only screen and (max-width: 767px) { .module-four { border-bottom: 1px solid #555555; } }
+@media only screen and (max-width: 767px) { .module-four { border-bottom: 1px solid #d1d2d1; } }
 .module-four .module-icon { background-color: #6ec4e8; }
 .module-four .module-list-actions li:before { color: #6ec4e8; }
 

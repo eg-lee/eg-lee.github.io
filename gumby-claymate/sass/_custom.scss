@@ -21,12 +21,12 @@
 /* Color For Development
 ================================================== */
 
-* {
+/** {
   background: rgba(0,0,0,.05);
 }
 $color-structure-border: $body-font-color;
-
-//$color-structure-border: #d1d2d1;
+*/
+$color-structure-border: #d1d2d1;
 
 /* Media Query For Wide Screens
 ================================================== */
