@@ -444,6 +444,9 @@ $padding-nav-a: 22px;
   //padding-bottom: 5px; // new 3-20
   border-bottom: 1px solid $color-structure-border;
 
+  @include respond(all-phones) {
+  	padding-bottom: 5px; // new 3-24
+  }
   .module-heading {
     font-size: 16px;
   }
