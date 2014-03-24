@@ -21,12 +21,12 @@
 /* Color For Development
 ================================================== */
 
-/** {
+* {
   background: rgba(0,0,0,.05);
 }
 $color-structure-border: $body-font-color;
-*/
-$color-structure-border: #d1d2d1;
+
+//$color-structure-border: #d1d2d1;
 
 /* Media Query For Wide Screens
 ================================================== */
@@ -68,6 +68,9 @@ $padding-nav-a: 22px;
   border-bottom: $width solid $color; 
 }
 
+/* Icon Font
+================================================== */
+
 .icon-font {
   display: inline-block;
   font-family: $font-family-icon !important;
@@ -78,9 +81,6 @@ $padding-nav-a: 22px;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
-
-/* Icon Font
-================================================== */
 
 .icon-font-get-quotes:before { @extend .icon-font; content: "\0041"; } // A
 .icon-font-recent-activity:before { @extend .icon-font; content: "\0042"; }
@@ -97,9 +97,16 @@ $padding-nav-a: 22px;
 .header-row {
   @include row();
   margin-top: 10px;
+  height: 85px;
 
   .logo-wn {
     @include hybrid(11);
+
+    img {
+  	  //height: 83px;
+  	  //width: 145px;
+  	  max-height: 99%;
+  	}
 
     @include respond("all-phones") { // mobile view
       text-align: center;
@@ -109,7 +116,12 @@ $padding-nav-a: 22px;
   .logo-ao {
   	@include hybrid(11);
   	@include pull(1, hybrid);
+  	@include hidden('all-phones');
   	text-align: right;
+
+  	img {
+  	  max-height: 99%;
+  	}
 
   	p {
   	  // /margin-bottom: 10px; // old 

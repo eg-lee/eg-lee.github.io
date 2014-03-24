@@ -2044,10 +2044,8 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 */
 /* Color For Development
 ================================================== */
-/** { background: rgba(0,0,0,.05);
-}
-$color-structure-border: $body-font-color;
-*/
+* { background: rgba(0, 0, 0, 0.05); }
+
 /* Media Query For Wide Screens
 ================================================== */
 /* extend max-row-width for wide screens */
@@ -2058,10 +2056,10 @@ $color-structure-border: $body-font-color;
 ================================================== */
 /* Mixins
 ================================================== */
-.icon-font, .icon-font-get-quotes:before, .icon-font-recent-activity:before, .icon-font-endorse-or-cancel:before, .icon-font-make-payments:before, .icon-font-access-policy-info:before, .icon-font-access-claims-info:before, .icon-font-order-reports:before, .icon-font-view-manuals:before { display: inline-block; font-family: "WN AO Icon Font" !important; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 0; }
-
 /* Icon Font
 ================================================== */
+.icon-font, .icon-font-get-quotes:before, .icon-font-recent-activity:before, .icon-font-endorse-or-cancel:before, .icon-font-make-payments:before, .icon-font-access-policy-info:before, .icon-font-access-claims-info:before, .icon-font-order-reports:before, .icon-font-view-manuals:before { display: inline-block; font-family: "WN AO Icon Font" !important; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 0; }
+
 .icon-font-get-quotes:before { content: "\0041"; }
 
 .icon-font-recent-activity:before { content: "\0042"; }
@@ -2080,14 +2078,17 @@ $color-structure-border: $body-font-color;
 
 /* Header
 ================================================== */
-.header-row { width: 100%; max-width: 1000px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; margin-top: 10px; }
+.header-row { width: 100%; max-width: 1000px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; margin-top: 10px; height: 85px; }
 .header-row > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { .header-row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
 .header-row .logo-wn { width: 44.70486%; }
 @media only screen and (max-width: 767px) { .header-row .logo-wn { float: left; margin-left: 0; width: 100%; } }
+.header-row .logo-wn img { max-height: 99%; }
 @media only screen and (max-width: 767px) { .header-row .logo-wn { text-align: center; } }
 .header-row .logo-ao { width: 44.70486%; text-align: right; }
 @media only screen and (max-width: 767px) { .header-row .logo-ao { float: left; margin-left: 0; width: 100%; } }
+@media only screen and (max-width: 767px) { .header-row .logo-ao { display: none !important; } }
+.header-row .logo-ao img { max-height: 99%; }
 .header-row .logo-ao p { margin-bottom: 0px; font-size: 11px; }
 @media only screen and (max-width: 768px) { .header-row .logo-ao p { text-align: right; } }
 @media only screen and (max-width: 767px) { .header-row .logo-ao { text-align: center; }
@@ -2098,7 +2099,7 @@ $color-structure-border: $body-font-color;
 .nav-row { width: 100%; max-width: 1000px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; margin-bottom: 20px; padding-top: 4px; }
 .nav-row > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
-.nav-row .nav-container { width: auto; min-width: 0; max-width: none; padding-left: 0; padding-right: 0; border-top: 1px solid #d1d2d1; border-bottom: 1px solid #d1d2d1; padding-top: 4px; font-weight: 500; }
+.nav-row .nav-container { width: auto; min-width: 0; max-width: none; padding-left: 0; padding-right: 0; border-top: 1px solid #555555; border-bottom: 1px solid #555555; padding-top: 4px; font-weight: 500; }
 .nav-row .nav-container > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-row .nav-container { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
 @media only screen and (max-width: 767px) { .nav-row .nav-container { padding-top: 10px; } }
@@ -2117,8 +2118,8 @@ $color-structure-border: $body-font-color;
 .text-size span { float: left; }
 .text-size .text-size-char-container { float: left; display: block; height: 25px; }
 .text-size .text-size-char-container div { float: left; height: 17px; margin-top: 4px; padding-left: 8px; padding-right: 8px; }
-.text-size .text-size-char-container div.normal { border-right: 1px solid #d1d2d1; line-height: 18px; }
-.text-size .text-size-char-container div.medium { border-right: 1px solid #d1d2d1; font-size: 16px; }
+.text-size .text-size-char-container div.normal { border-right: 1px solid #555555; line-height: 18px; }
+.text-size .text-size-char-container div.medium { border-right: 1px solid #555555; font-size: 16px; }
 .text-size .text-size-char-container div.medium span { line-height: 17px; }
 .text-size .text-size-char-container div.large { font-size: 18px; }
 .text-size .text-size-char-container div.large span { line-height: 15px; }
@@ -2132,8 +2133,8 @@ $color-structure-border: $body-font-color;
 .nav-main { width: 44.70486%; margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-main { float: left; margin-left: 0; width: 100%; } }
 .nav-main ul { float: right; margin-bottom: 0; }
-.nav-main ul li { display: inline; padding-bottom: 0; border-right: 1px solid #d1d2d1; }
-@media only screen and (max-width: 767px) { .nav-main ul li { width: 100%; display: block; border-right: none; padding: 5px 0; border-top: 1px solid #d1d2d1; text-align: center; } }
+.nav-main ul li { display: inline; padding-bottom: 0; border-right: 1px solid #555555; }
+@media only screen and (max-width: 767px) { .nav-main ul li { width: 100%; display: block; border-right: none; padding: 5px 0; border-top: 1px solid #555555; text-align: center; } }
 .nav-main ul li a { display: inline-block; margin-right: -.26em; padding-left: 22px; padding-right: 22px; text-decoration: none; }
 @media only screen and (max-width: 975px) { .nav-main ul li a { padding-left: 20px; padding-right: 20px; } }
 @media only screen and (max-width: 939px) { .nav-main ul li a { padding-left: 18px; padding-right: 18px; } }
@@ -2164,11 +2165,11 @@ $color-structure-border: $body-font-color;
 
 /* Modules
 ================================================== */
-.module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { margin-top: 25px; border-bottom: 1px solid #d1d2d1; /* modify default valign properties */ }
+.module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { margin-top: 25px; border-bottom: 1px solid #555555; /* modify default valign properties */ }
 .module .module-heading, .module-one .module-heading, .module-two .module-heading, .module-three .module-heading, .module-four .module-heading, .module-five .module-heading, .module-six .module-heading, .module-seven .module-heading, .module-eight .module-heading { font-size: 16px; }
 .module .module-icon, .module-one .module-icon, .module-two .module-icon, .module-three .module-icon, .module-four .module-icon, .module-five .module-icon, .module-six .module-icon, .module-seven .module-icon, .module-eight .module-icon { height: 90px; width: 90px; margin-left: -90px; border-radius: 10px; text-align: center; }
 .module .module-icon i:before, .module-one .module-icon i:before, .module-two .module-icon i:before, .module-three .module-icon i:before, .module-four .module-icon i:before, .module-five .module-icon i:before, .module-six .module-icon i:before, .module-seven .module-icon i:before, .module-eight .module-icon i:before { font-size: 96px; color: #fff; line-height: 1; margin-top: -27px; }
-.module .module-valign, .module-one .module-valign, .module-two .module-valign, .module-three .module-valign, .module-four .module-valign, .module-five .module-valign, .module-six .module-valign, .module-seven .module-valign, .module-eight .module-valign { padding-left: 90px; height: auto; border-top: 1px solid #d1d2d1; }
+.module .module-valign, .module-one .module-valign, .module-two .module-valign, .module-three .module-valign, .module-four .module-valign, .module-five .module-valign, .module-six .module-valign, .module-seven .module-valign, .module-eight .module-valign { padding-left: 90px; height: auto; border-top: 1px solid #555555; }
 .module .module-valign:before, .module-one .module-valign:before, .module-two .module-valign:before, .module-three .module-valign:before, .module-four .module-valign:before, .module-five .module-valign:before, .module-six .module-valign:before, .module-seven .module-valign:before, .module-eight .module-valign:before { height: 135px; /* modify height on screen width change, to keep module's inline */ }
 @media only screen and (max-width: 908px) { .module .module-valign:before, .module-one .module-valign:before, .module-two .module-valign:before, .module-three .module-valign:before, .module-four .module-valign:before, .module-five .module-valign:before, .module-six .module-valign:before, .module-seven .module-valign:before, .module-eight .module-valign:before { height: 150px; margin-top: 5px; } }
 @media only screen and (max-width: 807px) { .module .module-valign:before, .module-one .module-valign:before, .module-two .module-valign:before, .module-three .module-valign:before, .module-four .module-valign:before, .module-five .module-valign:before, .module-six .module-valign:before, .module-seven .module-valign:before, .module-eight .module-valign:before { height: 180px; } }
@@ -2195,7 +2196,7 @@ $color-structure-border: $body-font-color;
 .module-three .module-list-actions li:before { color: #00a7e1; }
 
 .module-four { border: 0; color: #6ec4e8; }
-@media only screen and (max-width: 767px) { .module-four { border-bottom: 1px solid #d1d2d1; } }
+@media only screen and (max-width: 767px) { .module-four { border-bottom: 1px solid #555555; } }
 .module-four .module-icon { background-color: #6ec4e8; }
 .module-four .module-list-actions li:before { color: #6ec4e8; }
 
