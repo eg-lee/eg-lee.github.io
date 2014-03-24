@@ -155,7 +155,7 @@ $padding-nav-a: 22px;
 ================================================== */
 
 .nav-remove-padding {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 } // for jquery toggle
 
 .nav-add-margin {
@@ -198,7 +198,7 @@ $padding-nav-a: 22px;
   @include respond(all-phones) {
     width: 75%;
     font-size: 16px;
-    line-height: 39px;
+    line-height: 35px; // same height as nav button
   }
 } // welcome-user
 
@@ -313,12 +313,12 @@ $padding-nav-a: 22px;
 
     #nav-icon {
       float: right;
-      padding: 7px 8px;
+      padding: 5px 8px;
       border-radius: 8px;
       //behavior: url(js/pie/PIE.htc); // for border radius in IE8
       background-color: $color-get-quotes;
       color: #fff;
-      font-size: $xlarge;
+      font-size: $larger;
       cursor: pointer;
     }
   }
@@ -439,7 +439,8 @@ $padding-nav-a: 22px;
 .module {
   //margin-top: 10px; // old
   //padding-bottom: 10px; // old
-  margin-top: 25px; // new 3-20
+  //margin-top: 25px; // new 3-20
+  margin-top: 30px; // new 3-24
   //padding-bottom: 5px; // new 3-20
   border-bottom: 1px solid $color-structure-border;
 
@@ -467,7 +468,7 @@ $padding-nav-a: 22px;
 	.module-valign {
 	  padding-left: 90px;
 	  height: auto;
-	  border-top: 1px solid $color-structure-border; // new 3-20
+	  //border-top: 1px solid $color-structure-border; // new 3-20
 	}
 
 	.module-valign:before {
@@ -579,7 +580,7 @@ $padding-nav-a: 22px;
 
 .module-four {
   @extend .module;
-  //border: 0; // old
+  border: 0; // old
   color: $color-make-payments;
   
   @include respond("all-phones") {
@@ -601,7 +602,8 @@ $padding-nav-a: 22px;
   margin-top: 0;
   color: $color-access-policy-info;
   @include respond("all-phones") {
-    margin-top: 10px;
+    //margin-top: 10px; // old
+    margin-top: 25px; // new 3-20
   }
   .module-icon {
 	@extend .module-icon;
@@ -644,7 +646,7 @@ $padding-nav-a: 22px;
 
 .module-eight {
   @extend .module;
-  //border: 0; // old
+  border: 0; // old
   color: $color-view-manuals;
   .module-icon {
 	@extend .module-icon;
