@@ -54,6 +54,8 @@ $color-my-profile: $color-recent-activity;
 $color-help: $color-endorse-or-cancel;
 $color-sign-out: $color-access-policy-info;
 $padding-nav-a: 22px;
+$padding-nav-mobile: 8px;
+$height-nav-mobile-button: 45px;
 
 /* Mixins
 ================================================== */
@@ -159,7 +161,7 @@ $padding-nav-a: 22px;
 } // for jquery toggle
 
 .nav-add-margin {
-  margin-top: 5px;
+  margin-top: $padding-nav-mobile;
 } // for jquery toggle
 
 .nav-row {
@@ -179,7 +181,7 @@ $padding-nav-a: 22px;
   	font-weight: 500;
 
   	@include respond(all-phones) {
-  	  @include padding-top-bottom(5px);
+  	  @include padding-top-bottom($padding-nav-mobile);
   	}	
    } // nav-container
 } // nav-row
@@ -198,7 +200,7 @@ $padding-nav-a: 22px;
   @include respond(all-phones) {
     width: 75%;
     font-size: 16px;
-    line-height: 35px; // same height as nav button
+    line-height: $height-nav-mobile-button; // same height as nav button
   }
 } // welcome-user
 
@@ -220,7 +222,6 @@ $padding-nav-a: 22px;
     margin-left: 22px;
   }
 
-
   @include respond("max-width: 958px") {
     margin-left: 25px;
   }
@@ -228,8 +229,6 @@ $padding-nav-a: 22px;
   @include respond("max-width: 951px") {
     margin-left: 20px;
   }
-
-
 
   @include respond("max-width: 879px") {
     margin-left: 16px;
@@ -332,7 +331,7 @@ $padding-nav-a: 22px;
 
     #nav-icon {
       float: right;
-      padding: 5px 8px;
+      padding: 10px 12px;
       border-radius: 8px;
       //behavior: url(js/pie/PIE.htc); // for border radius in IE8
       background-color: $color-get-quotes;
@@ -365,16 +364,13 @@ $padding-nav-a: 22px;
   		width: 100%;
   		display: block;
   		border-right: none;
-  		padding: 5px 0;
+  		@include padding-top-bottom($padding-nav-mobile);
   		border-top: 1px solid $color-structure-border;
-
   		text-align: center;
   	  }
 
       a {
         display: inline-block;
-	    //padding-left: 22px;
-	    //padding-right: 22px;.
 	    margin-right: -.26em;
 	    @include padding-left-right($padding-nav-a); // 22px
 	    text-decoration: none;
@@ -399,6 +395,8 @@ $padding-nav-a: 22px;
 	    }
 	    @include respond(all-phones) {
 	  	  width: 100%;
+	  	  line-height: $height-nav-mobile-button; // same height as nav button
+	  	  font-size: 16px;
 	    }
       } // a
 

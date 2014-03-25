@@ -2100,7 +2100,7 @@ $color-structure-border: $body-font-color;
 ================================================== */
 .nav-remove-padding { padding-bottom: 0 !important; }
 
-.nav-add-margin { margin-top: 5px; }
+.nav-add-margin { margin-top: 8px; }
 
 .nav-row { width: 100%; max-width: 1000px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; margin-bottom: 20px; padding-top: 4px; }
 .nav-row > *:first-child { margin-left: 0; }
@@ -2109,12 +2109,12 @@ $color-structure-border: $body-font-color;
 .nav-row .nav-container { width: auto; min-width: 0; max-width: none; padding-left: 0; padding-right: 0; border-top: 1px solid #d1d2d1; border-bottom: 1px solid #d1d2d1; padding-top: 4px; font-weight: 500; }
 .nav-row .nav-container > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-row .nav-container { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
-@media only screen and (max-width: 767px) { .nav-row .nav-container { padding-top: 5px; padding-bottom: 5px; } }
+@media only screen and (max-width: 767px) { .nav-row .nav-container { padding-top: 8px; padding-bottom: 8px; } }
 
 .welcome-user { width: 27.69097%; }
 @media only screen and (max-width: 767px) { .welcome-user { float: left; margin-left: 0; width: 100%; } }
 .welcome-user span { padding-left: 10px; color: #f7941e; }
-@media only screen and (max-width: 767px) { .welcome-user { width: 75%; font-size: 16px; line-height: 35px; } }
+@media only screen and (max-width: 767px) { .welcome-user { width: 75%; font-size: 16px; line-height: 45px; } }
 
 .text-size { margin-left: 40px; }
 @media only screen and (max-width: 997px) { .text-size { margin-left: 35px; } }
@@ -2144,14 +2144,14 @@ $color-structure-border: $body-font-color;
 
 #nav-mobile { display: none; }
 @media only screen and (max-width: 767px) { #nav-mobile { float: right; position: relative; display: block; width: 25%; padding-right: 10px; }
-  #nav-mobile #nav-icon { float: right; padding: 5px 8px; border-radius: 8px; background-color: #00529f; color: #fff; font-size: 30px; cursor: pointer; } }
+  #nav-mobile #nav-icon { float: right; padding: 10px 12px; border-radius: 8px; background-color: #00529f; color: #fff; font-size: 30px; cursor: pointer; } }
 @media only screen and (max-width: 560px) { #nav-mobile { padding-right: 10px; } }
 
 .nav-main { width: 61.71875%; margin-left: 0; }
 @media only screen and (max-width: 767px) { .nav-main { float: left; margin-left: 0; width: 100%; } }
 .nav-main ul { float: right; margin-bottom: 0; }
 .nav-main ul li { display: inline; padding-bottom: 0; border-right: 1px solid #d1d2d1; }
-@media only screen and (max-width: 767px) { .nav-main ul li { width: 100%; display: block; border-right: none; padding: 5px 0; border-top: 1px solid #d1d2d1; text-align: center; } }
+@media only screen and (max-width: 767px) { .nav-main ul li { width: 100%; display: block; border-right: none; padding-top: 8px; padding-bottom: 8px; border-top: 1px solid #d1d2d1; text-align: center; } }
 .nav-main ul li a { display: inline-block; margin-right: -.26em; padding-left: 22px; padding-right: 22px; text-decoration: none; }
 @media only screen and (max-width: 975px) { .nav-main ul li a { padding-left: 20px; padding-right: 20px; } }
 @media only screen and (max-width: 939px) { .nav-main ul li a { padding-left: 18px; padding-right: 18px; } }
@@ -2159,7 +2159,7 @@ $color-structure-border: $body-font-color;
 @media only screen and (max-width: 867px) { .nav-main ul li a { padding-left: 14px; padding-right: 14px; } }
 @media only screen and (max-width: 832px) { .nav-main ul li a { padding-left: 12px; padding-right: 12px; } }
 @media only screen and (max-width: 796px) { .nav-main ul li a { padding-left: 10px; padding-right: 10px; } }
-@media only screen and (max-width: 767px) { .nav-main ul li a { width: 100%; } }
+@media only screen and (max-width: 767px) { .nav-main ul li a { width: 100%; line-height: 45px; font-size: 16px; } }
 .nav-main ul li.my-contacts a { color: #00529f; }
 .nav-main ul li.my-profile a { color: #0081c3; }
 .nav-main ul li.help a { color: #00a7e1; }
