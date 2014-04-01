@@ -1,0 +1,56 @@
+/*
+  * _header.scss
+  * SASS styling for header
+  * Create Date: 03/27/2014
+  * Author: Edward G. Lee
+*/
+
+.header-row {
+  @include row();
+  padding-top: 10px;
+
+  .logo-wn {
+    @include hybrid(11);
+
+    img {
+  	  //height: 83px;
+  	  //width: 145px;
+  	  max-height: 99%; // keep retina images scaled correctly
+  	}
+
+    @include respond("all-phones") { // mobile view
+      text-align: center;
+    }
+  } // logo-wn
+
+  .logo-ao {
+  	@include hybrid(11);
+  	@include pull(1, hybrid);
+  	@include hidden('all-phones');
+  	text-align: right;
+
+  	img {
+  	  max-height: 99%; // keep retina images scaled correctly
+  	}
+
+  	p {
+  	  // /margin-bottom: 10px; // old 
+  	  margin-bottom: 0px; // new 3-20
+  	  font-size: 11px;
+  	}
+
+  	@include respond("max-width: 768px") { // premature mobile view, aligns left
+      p {
+      	text-align: right;
+      }
+    }
+
+    @include respond("all-phones") { // mobile view
+      text-align: center;
+
+      p {
+      	text-align: center;
+      }
+    }
+  } // logo-ao
+} // header-row

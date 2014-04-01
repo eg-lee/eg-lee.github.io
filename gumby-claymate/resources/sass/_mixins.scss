@@ -1,0 +1,22 @@
+/*
+  * _mixins.scss
+  * SASS mixins
+  * Create Date: 03/27/2014
+  * Author: Edward G. Lee
+*/
+
+@mixin padding-left-right($length) {
+  padding-left: $length;
+  padding-right: $length;
+}
+
+@mixin padding-top-bottom($length) {
+  padding-top: $length;
+  padding-bottom: $length;
+}
+
+@mixin border-top-bottom($width, $color) {
+  border-top: $width solid $color;
+  border-bottom: $width solid $color; 
+}
+

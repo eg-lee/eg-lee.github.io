@@ -24,6 +24,10 @@
         border-bottom: 1px solid $body-border-color;
         width: 33.33%;
         @include padding-top-bottom(5px);
+        @include respond(all-phones) {
+          padding-left: 0;
+        }
+
         &:first-child {
           font-weight: 400;
         }

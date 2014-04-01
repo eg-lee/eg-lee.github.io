@@ -1,0 +1,89 @@
+/*
+  * _my-contacts.scss
+  * SASS styling for My Contacts page
+  * Create Date: 03/27/2014
+  * Author: Edward G. Lee
+*/
+
+.contacts-table {
+  border: 0;
+  thead {
+    background-color: #fff;
+    color: $body-font-color;
+    tr {
+      th {
+        border-top: 0;
+        font-size: 16px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border-top: 0;
+        border-bottom: 1px solid $body-border-color;
+        width: 33.33%;
+        @include padding-top-bottom(5px);
+        @include respond(all-phones) {
+          padding-left: 0;
+        }
+
+        &:first-child {
+          font-weight: 400;
+        }
+        a {
+          -ms-word-break: break-all;
+
+          /* Be VERY careful with this, breaks normal words wh_erever */
+          word-break: break-all;
+
+          /* Non standard for webkit */
+          word-break: break-word;
+
+          -webkit-hyphens: auto;
+          -moz-hyphens: auto;
+          hyphens: auto;
+        }
+      }
+    }
+    /*tr:nth-of-type(even) {
+      background-color: $color-blue-lighter;
+      td:first-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        behavior: url(js/libs/PIE.htc); // for border radius in IE8
+      }
+      td:last-child{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        behavior: url(js/libs/PIE.htc); // for border radius in IE8
+      }
+    }*/
+  } // tbody
+} // contacts-table
+
+.agency-tabs {
+  .tab-content {
+    @include padding-left-right(0);
+  }
+  .tab-nav {
+    li {
+      margin: 0 0 0 -3px;
+      //min-width: 25%;
+      -o-text-overflow: ellipsis;   /* Opera */
+      text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
+      //overflow:hidden;              /* don't show excess chars */
+      //white-space:nowrap;           /* force single line */
+ 
+      a {
+        border-radius: 10px 10px 0 0;
+        font-weight: 500;
+        behavior: url(resources/js/libs/PIE.htc); // for border radius in IE8
+        //background-color: #f2f2f2;
+      }
+    }
+    li:first-child {
+      margin-left: 1px;
+    }
+  }
+}

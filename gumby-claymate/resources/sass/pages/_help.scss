@@ -1,0 +1,51 @@
+/*
+  * _help.scss
+  * SASS styling for Help page
+  * Create Date: 03/27/2014
+  * Author: Edward G. Lee
+*/
+
+.systems-availability-table {
+  border: 0;
+  thead {
+    background-color: #fff;
+    color: $body-font-color;
+    tr {
+      th {
+        border-top: 0;
+        font-size: 16px;
+        @include respond(all-phones) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border-top: 0;
+        border-bottom: 1px solid $body-border-color;
+        @include padding-top-bottom(5px);
+        @include respond(all-phones) {
+          padding-left: 0;
+        }
+      }
+      td:first-child {
+        font-weight: 500;
+      }
+    }
+    tr:first-child {
+      border-top: 1px solid $body-border-color;
+    }
+  }
+
+      //border-bottom: 1px solid $body-border-color !important;
+}
+
+.help-ul-links {
+
+  /*li {
+    @include padding-top-bottom(5px);
+    border-bottom: 1px solid $body-border-color;
+  }*/
+}

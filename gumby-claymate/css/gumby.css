@@ -46,7 +46,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .main-row:before, .header-row:before, .nav-row:before, .nav-row .nav-container:before, .main-row:after, .header-row:after, .nav-row:after, .nav-row .nav-container:after { content: ""; display: table; }
 .main-row:after, .header-row:after, .nav-row:after, .nav-row .nav-container:after { clear: both; }
 
-.header-row .logo-wn, .header-row .logo-ao, .welcome-user, .nav-main, .main-row .module-container { margin-left: 2.08333%; float: left; min-height: 1px; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.header-row .logo-wn, .header-row .logo-ao, .welcome-user, .nav-main, .module-container { margin-left: 2.08333%; float: left; min-height: 1px; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .pull_right, .header-row .logo-ao, .nav-main { float: right; }
 
@@ -2074,14 +2074,19 @@ a:active { color: #6ec4e8; }
 .page-sub-heading-inset-one { font-size: 14px; font-weight: 400; }
 
 .page-sub-heading-container, .page-sub-heading-container-inset-one { border-bottom: 1px solid #d1d2d1; margin-bottom: 10px; padding-left: 20px; padding-right: 20px; }
+@media only screen and (max-width: 767px) { .page-sub-heading-container, .page-sub-heading-container-inset-one { padding-left: 0; padding-right: 0; } }
 
 .page-sub-heading-container-inset-one { padding-left: 40px; padding-right: 40px; }
+@media only screen and (max-width: 767px) { .page-sub-heading-container-inset-one { padding-left: 0; padding-right: 0; } }
 
 .page-content-container { padding-left: 20px; padding-right: 20px; }
+@media only screen and (max-width: 767px) { .page-content-container { padding-left: 0; padding-right: 0; } }
 
 .page-table-container { padding-left: 10px; padding-right: 10px; }
+@media only screen and (max-width: 767px) { .page-table-container { padding-left: 0; padding-right: 0; } }
 
 .page-table-container-inset-one { padding-left: 30px; padding-right: 30px; }
+@media only screen and (max-width: 767px) { .page-table-container-inset-one { padding-left: 0; padding-right: 0; } }
 
 /* Partials
 ================================================== */
@@ -2204,15 +2209,13 @@ a:active { color: #6ec4e8; }
 
 /* _portal.scss SASS styling for main portal Create Date: 03/27/2014 Author: Edward G. Lee
 */
-.main-row { width: 100%; max-width: 1000px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
-.main-row > *:first-child { margin-left: 0; }
-@media only screen and (max-width: 767px) { .main-row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
-.main-row .module-container-right { margin-left: 10.59028%; }
-.main-row .module-container-right:first-child { margin-left: 8.50694%; }
-@media only screen and (max-width: 767px) { .main-row .module-container-right { margin-left: 0; }
-  .main-row .module-container-right:first-child { margin-left: 0; } }
-.main-row .module-container { width: 44.70486%; }
-@media only screen and (max-width: 767px) { .main-row .module-container { float: left; margin-left: 0; width: 100%; } }
+.module-container-right { margin-left: 10.59028%; }
+.module-container-right:first-child { margin-left: 8.50694%; }
+@media only screen and (max-width: 767px) { .module-container-right { margin-left: 0; }
+  .module-container-right:first-child { margin-left: 0; } }
+
+.module-container { width: 44.70486%; }
+@media only screen and (max-width: 767px) { .module-container { float: left; margin-left: 0; width: 100%; } }
 
 .module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { margin-top: 30px; border-bottom: 1px solid #d1d2d1; /* modify default valign properties */ }
 @media only screen and (max-width: 767px) { .module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { padding-bottom: 5px; } }
@@ -2286,6 +2289,7 @@ a:active { color: #6ec4e8; }
 .contacts-table tbody { /*tr:nth-of-type(even) { background-color: $color-blue-lighter; td:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; behavior: url(js/libs/PIE.htc); // for border radius in IE8 } td:last-child{ border-top-right-radius: 10px; border-bottom-right-radius: 10px; behavior: url(js/libs/PIE.htc); // for border radius in IE8 }
 }*/ }
 .contacts-table tbody tr td { border-top: 0; border-bottom: 1px solid #d1d2d1; width: 33.33%; padding-top: 5px; padding-bottom: 5px; }
+@media only screen and (max-width: 767px) { .contacts-table tbody tr td { padding-left: 0; } }
 .contacts-table tbody tr td:first-child { font-weight: 400; }
 .contacts-table tbody tr td a { -ms-word-break: break-all; /* Be VERY careful with this, breaks normal words wh_erever */ word-break: break-all; /* Non standard for webkit */ word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; }
 

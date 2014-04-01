@@ -79,22 +79,37 @@ a:active {
   border-bottom: 1px solid $body-border-color;
   margin-bottom: 10px;
   @include padding-left-right(20px);
+  @include respond(all-phones) {
+    @include padding-left-right(0);
+  }
 }
 
 .page-sub-heading-container-inset-one {
   @extend .page-sub-heading-container;
   @include padding-left-right(40px);
+  @include respond(all-phones) {
+    @include padding-left-right(0);
+  }
 }
 .page-content-container {
   @include padding-left-right(20px);
+  @include respond(all-phones) {
+    @include padding-left-right(0);
+  }
 }
 
 .page-table-container {
   @include padding-left-right(10px);
+  @include respond(all-phones) {
+    @include padding-left-right(0);
+  }
 }
 
 .page-table-container-inset-one {
   @include padding-left-right(30px);
+  @include respond(all-phones) {
+    @include padding-left-right(0);
+  }
 }
 
 

@@ -1,0 +1,45 @@
+#login-page {
+	.page-container-title {
+		@include border-top-bottom(1px, $body-border-color);
+	}
+
+	.login-container {
+		@include column(5, center);
+		
+		@include respond(desktop) {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		
+		label {
+			color: $color-blue-dark;
+			font-weight: $font-weight-medium;
+			
+			@include respond(desktop) {
+				text-align: right;
+			}
+		}
+		
+		div:last-child {
+			@include row(nested);
+			
+			.forgot {
+				@include push(3);
+				@include column(5);
+			}
+
+			.login {
+				@include column(4);
+				text-align: right;
+			}
+		}
+	}
+		
+	.terms-and-conditions {
+		@include column(7, center);
+		
+		p {
+			@extend .note;
+		}
+	}
+}

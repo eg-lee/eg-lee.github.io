@@ -1,0 +1,144 @@
+/*
+  * _fonts.scss
+  * Custom Fonts
+  * Create Date: 03/10/2014
+  * Author: Edward G. Lee
+*/
+
+// Import Google Web Fonts
+/*@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);*/
+
+// Set local icon font
+@font-face {
+  font-family: '#{$icons}';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/icons/#{$icons}.eot);
+  src: url('../fonts/icons/#{$icons}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/icons/#{$icons}.woff') format('woff'),
+       url('../fonts/icons/#{$icons}.ttf')  format('truetype');
+}
+
+// To include your own, local copies of fonts, use the following template
+//
+//@font-face {
+//  font-family: '#{$some-font-variable}';
+//  font-style: normal;
+//  font-weight: 400;
+//  src: url(../fonts/icons/#{$some-font-variable}.eot);
+//  src: url('../fonts/icons/#{$some-font-variable}.eot?#iefix') format('ie9-skip-eot'),
+//       url('../fonts/icons/#{$some-font-variable}.woff') format('woff'),
+//       url('../fonts/icons/#{$some-font-variable}.ttf')  format('truetype');
+//}
+
+// Regular
+@font-face {
+  font-family: '#{$font-family-locator-web}';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/locator-web/eot/#{$font-regular}.eot);
+  src: url('../fonts/locator-web/eot/#{$font-regular}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/locator-web/woff/#{$font-regular}.woff') format('woff');//,
+       //url('../fonts/icons/#{$font-regular}.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: '#{$font-family-locator-web}';
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/locator-web/eot/#{$font-regular-italic}.eot);
+  src: url('../fonts/locator-web/eot/#{$font-regular-italic}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/locator-web/woff/#{$font-regular-italic}.woff') format('woff');//,
+       //url('../fonts/icons/#{$some-font-variable}.ttf')  format('truetype');
+}
+
+// Ultra Light
+@font-face {
+	font-family: '#{$font-family-locator-web}';
+	font-style: normal;
+	font-weight: 200;
+	src: url(../fonts/locator-web/eot/#{$font-ultra-light}.eot);
+	src: url("../fonts/locator-web/eot/#{$font-ultra-light}.eot?#iefix") format("ie9-skip-eot"),
+		url("../fonts/locator-web/woff/#{$font-ultra-light}.woff") format("woff");
+}
+
+@font-face {
+	font-family: '#{$font-family-locator-web}';
+	font-style: italic;
+	font-weight: 200;
+	src: url(../fonts/locator-web/eot/#{$font-ultra-light-italic}.eot);
+	src: url("../fonts/locator-web/eot/#{$font-ultra-light-italic}.eot?#iefix") format("ie9-skip-eot"),
+		url("../fonts/locator-web/woff/#{$font-ultra-light-italic}.woff") format("woff");
+}
+
+// Light
+@font-face {
+	font-family: '#{$font-family-locator-web}';
+	font-style: normal;
+	font-weight: 300;
+	src: url(../fonts/locator-web/eot/#{$font-light}.eot);
+	src: url("../fonts/locator-web/eot/#{$font-light}.eot?#iefix") format("ie9-skip-eot"),
+		url("../fonts/locator-web/woff/#{$font-light}.woff") format("woff");
+}
+
+@font-face {
+	font-family: '#{$font-family-locator-web}';
+	font-style: italic;
+	font-weight: 300;
+	src: url(../fonts/locator-web/eot/#{$font-light-italic}.eot);
+	src: url("../fonts/locator-web/eot/#{$font-light-italic}.eot?#iefix") format("ie9-skip-eot"),
+		url("../fonts/locator-web/woff/#{$font-light-italic}.woff") format("woff");
+}
+
+// Medium
+@font-face {
+	font-family: '#{$font-family-locator-web}';
+	font-style: normal;
+	font-weight: 500;
+	src: url(../fonts/locator-web/eot/#{$font-medium}.eot);
+	src: url('../fonts/locator-web/eot/#{$font-medium}.eot?#iefix') format('ie9-skip-eot'),
+		url('../fonts/locator-web/woff/#{$font-medium}.woff') format('woff');
+}
+
+@font-face {
+	font-family: '#{$font-family-locator-web}';
+	font-style: italic;
+	font-weight: 500;
+	src: url(../fonts/locator-web/eot/#{$font-medium-italic}.eot);
+	src: url('../fonts/locator-web/eot/#{$font-medium-italic}.eot?#iefix') format('ie9-skip-eot'),
+		url('../fonts/locator-web/woff/#{$font-medium-italic}.woff') format('woff');
+}
+
+// Bold
+@font-face {
+  font-family: '#{$font-family-locator-web}';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/locator-web/eot/#{$font-bold}.eot);
+  src: url('../fonts/locator-web/eot/#{$font-bold}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/locator-web/woff/#{$font-bold}.woff') format('woff');//,
+      //url('../fonts/icons/#{$some-font-variable}.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: '#{$font-family-locator-web}';
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/locator-web/eot/#{$font-bold-italic}.eot);
+  src: url('../fonts/locator-web/eot/#{$font-bold-italic}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/locator-web/woff/#{$font-bold-italic}.woff') format('woff');//,
+       //url('../fonts/icons/#{$some-font-variable}.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: '#{$font-family-icon}';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/icons/#{$font-icon-regular}.eot);
+  src: url('../fonts/icons/#{$font-icon-regular}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/icons/#{$font-icon-regular}.woff') format('woff'),
+       url('../fonts/icons/#{$font-icon-regular}.ttf')  format('truetype'),
+       url('../fonts/icons/#{$font-icon-regular}.svg')  format('svg');
+}
+
+

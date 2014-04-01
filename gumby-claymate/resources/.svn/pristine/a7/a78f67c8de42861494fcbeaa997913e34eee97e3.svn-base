@@ -1,0 +1,147 @@
+/*
+  * _custom.scss
+  * SASS styling for Agents Online
+  * Create Date: 03/10/2014
+  * Author: Edward G. Lee
+*/
+
+/* Contents
+==================================================
+  Color For Development
+  Mixins
+  Global Styles
+  Partials
+*/
+
+/* Color For Development
+================================================== */
+
+/** {
+  background: rgba(0,0,0,.05);
+}
+$body-border-color: $body-font-color;
+*/
+
+
+
+/* Mixins
+================================================== */
+
+@import "mixins";
+
+/* Global styles
+================================================== */
+
+// Wide Screen Sizing
+.max-width-wide-screen {
+  max-width: 1320px !important;
+}
+
+/* extend max-row-width for wide screens */
+/*@include respond("min-width: 1441px") {
+  //$row-max-width: 1280px;
+}*/
+
+a:active {
+	color: $color-blue-light;
+}
+a:hover {
+	cursor: hand;
+	cursor: pointer;
+}
+form {
+	.field {
+		@include row(nested);
+		
+		label {
+			@include column(3);
+			@extend .inline;
+		}
+		
+		input {
+			@include column(9);
+			@extend .input;
+		}
+	}
+}
+h1 {
+	color: $color-blue-dark;
+	font-size: 1.7rem;
+	font-weight: 700;
+}
+h2 {
+	@extend h1;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+}
+h3 {
+	@extend h2;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+
+/*// Main
+.main-row {
+  @include row();
+} // main-row
+*/
+
+
+// Page
+.page-container {
+	@include row();
+}
+
+.page-container-title {
+	@include row(nested);
+	margin-top: 5px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid $body-border-color;
+}
+
+.page-container-content {
+	@include row(nested);
+}
+
+.page-sub-heading-container {
+  border-bottom: 1px solid $body-border-color;
+  margin-bottom: 10px;
+  @include padding-left-right(20px);
+}
+
+.page-sub-heading-container-inset-one {
+  @extend .page-sub-heading-container;
+  @include padding-left-right(40px);
+}
+
+.page-table-container {
+  @include padding-left-right(10px);
+}
+
+.page-table-container-inset-one {
+  @include padding-left-right(30px);
+}
+
+.note {
+	font-size: smaller;
+	font-weight: $font-weight-medium;
+	font-style: italic;
+	text-align: center;
+}
+
+/* Partials
+================================================== */
+
+@import "icons";
+
+// Site Structure
+@import "header";
+@import "nav";
+
+
+// Pages
+@import "pages/help";
+@import "pages/login";
+@import "pages/my-contacts";
+@import "pages/portal";

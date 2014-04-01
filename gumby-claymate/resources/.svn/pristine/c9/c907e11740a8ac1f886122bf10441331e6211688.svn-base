@@ -1,0 +1,28 @@
+/*
+  * _help.scss
+  * SASS styling for Help page
+  * Create Date: 03/27/2014
+  * Author: Edward G. Lee
+*/
+
+.systems-availability-table {
+  border: 0;
+  thead {
+    background-color: #fff;
+    color: $body-font-color;
+    tr {
+      th {
+        border-top: 0;
+        font-size: 16px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border-top: 0;
+      }
+    }
+  }
+
+}
