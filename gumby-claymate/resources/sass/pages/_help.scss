@@ -17,6 +17,11 @@
         @include respond(all-phones) {
           padding-left: 0;
         }
+        @include respond('max-width: 411px') {
+          font-size: 14px;
+          font-weight: 500;
+          padding: 5px 5px 5px 0;
+        }
       }
     }
   }
@@ -28,6 +33,9 @@
         @include padding-top-bottom(5px);
         @include respond(all-phones) {
           padding-left: 0;
+        }
+        @include respond('max-width: 411px') {
+          font-size: 12px;
         }
       }
       td:first-child {

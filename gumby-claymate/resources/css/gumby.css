@@ -2239,8 +2239,10 @@ h3 { font-size: 1rem; font-weight: 400; }
 .systems-availability-table thead { background-color: #fff; color: #555555; }
 .systems-availability-table thead tr th { border-top: 0; font-size: 16px; }
 @media only screen and (max-width: 767px) { .systems-availability-table thead tr th { padding-left: 0; } }
+@media only screen and (max-width: 411px) { .systems-availability-table thead tr th { font-size: 14px; font-weight: 500; padding: 5px 5px 5px 0; } }
 .systems-availability-table tbody tr td { border-top: 0; border-bottom: 1px solid #d1d2d1; padding-top: 5px; padding-bottom: 5px; }
 @media only screen and (max-width: 767px) { .systems-availability-table tbody tr td { padding-left: 0; } }
+@media only screen and (max-width: 411px) { .systems-availability-table tbody tr td { font-size: 12px; } }
 .systems-availability-table tbody tr td:first-child { font-weight: 500; }
 .systems-availability-table tbody tr:first-child { border-top: 1px solid #d1d2d1; }
 
