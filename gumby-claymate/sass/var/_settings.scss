@@ -12,6 +12,8 @@
   $font-family
   $base-font-size
   $body-font-color
+  $body-link-color
+  $body-link-hover-color
 */
 
 /* Added Variables
@@ -27,6 +29,35 @@
   $font-bold-italic
 */
 
+// Custom Variables
+$color-blue-dark: #00529f;
+$color-blue-medium: #0081c3;
+$color-blue:  #00a7e1;
+$color-blue-light: #6eC4e8;
+$color-blue-lighter: #e0ecf8;
+$color-teal: #48d2cb;
+$color-teal-dark: #00bbb3;
+$color-green: #00bC6f;
+$color-green-dark: #00953a;
+$color-orange: #f7941e;
+
+$color-get-quotes: $color-blue-dark;
+$color-recent-activity: $color-blue-medium;
+$color-endorse-or-cancel: $color-blue;
+$color-make-payments: $color-blue-light;
+$color-access-policy-info: $color-teal;
+$color-access-claims-info: $color-teal-dark;
+$color-order-reports: $color-green;
+$color-view-manuals: $color-green-dark;
+$color-welcome-user-name: $color-orange;
+$color-text-size: $color-blue;
+$color-my-contacts: $color-blue-dark;
+$color-my-profile: $color-blue-medium;
+$color-help: $color-blue;
+$color-sign-out: $color-teal;
+$padding-nav-a: 22px;
+$padding-nav-mobile: 8px;
+$height-nav-mobile-button: 45px;
 
 // Grid Settings
 $row-max-width: 960px !default;    				// 940px
@@ -61,7 +92,7 @@ $font-smoothing: antialiased;
 // Font Weights
 $font-weight-bold: 700;
 $font-weight-semibold: 600;
-$font-weight-medium: 400;
+$font-weight-medium: 500;
 $font-weight-regular: 400;
 $font-weight-light: 300;
 $font-weight-thin: 300;
@@ -107,8 +138,8 @@ $header-link-color: #d04526 !default;
 $header-link-hover-color: #c03d20 !default;
 $body-font-color: #555555 !default;
 //$body-font-color: #808080 !default;
-$body-link-color: #d04526 !default;
-$body-link-hover-color: #c03d20 !default;
+$body-link-color: $color-blue-medium !default;
+$body-link-hover-color: $color-blue !default;
 
 // User Interface Colors
 $global-bg-color: #fff;
@@ -202,4 +233,3 @@ $tt-pretty: yes;					// yes = pretty / no = flat
 // Floats
 $default-float: left;
 $switch-float: right;
-

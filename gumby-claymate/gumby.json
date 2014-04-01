@@ -1,14 +1,17 @@
 {
 	"build": {
 		"gumbyPath": "bower_components/gumby",
-		"outPath": "js"/*,
+		"outPath": "js",
 		"modules": [
+			"retina",
 			"fixed",
-			"navbar",
-			"tabs"
+			"checkbox",
+			"radiobtn",
+			"tabs",
+			"validation"
 		],
 		"addons": [
 			"bower_components/path-to-addon/addon.js"
-		]*/
+		]
 	}
 }

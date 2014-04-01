@@ -1,0 +1,296 @@
+/*
+  * _nav.scss
+  * SASS styling for navigation bar
+  * Create Date: 03/27/2014
+  * Author: Edward G. Lee
+*/
+
+.nav-remove-padding {
+  padding-bottom: 0 !important;
+} // for jquery toggle
+
+.nav-add-margin {
+  margin-top: $padding-nav-mobile;
+} // for jquery toggle
+
+.nav-row {
+  @include row();
+  //margin-bottom: 10px; // old
+  margin-bottom: 20px; // new 3-20
+  padding-top: 4px;
+
+  @include respond(all-phones) {
+    margin-bottom: 10px;
+  }
+  
+  .nav-container {
+    @include row('nested'); // nested to remove additional left/right padding
+  	@include border-top-bottom(1px, $body-border-color);
+  	padding-top: 4px;
+  	font-weight: 500;
+
+  	@include respond(all-phones) {
+  	  @include padding-top-bottom($padding-nav-mobile);
+  	}	
+   } // nav-container
+} // nav-row
+
+.welcome-user {
+  @include hybrid(7);
+
+  span {
+    padding-left: 10px;
+    color: $color-welcome-user-name;
+    @include respond("max-width: 560px") {
+      //padding-left: 10px; //change to padding
+    }
+  }
+
+  @include respond(all-phones) {
+    width: 75%;
+    font-size: 16px;
+    line-height: $height-nav-mobile-button; // same height as nav button
+  }
+} // welcome-user
+
+.text-size {
+  //@include hybrid(4); // old
+  //@include push(2, hybrid); // old
+  //float: left;
+  margin-left: 40px;
+  
+  @include respond("max-width: 997px") {
+    margin-left: 35px;
+  }
+
+  @include respond("max-width: 994px") {
+    margin-left: 30px;
+  }
+
+  @include respond("max-width: 981px") {
+    margin-left: 22px;
+  }
+
+  @include respond("max-width: 958px") {
+    margin-left: 25px;
+  }
+
+  @include respond("max-width: 951px") {
+    margin-left: 20px;
+  }
+
+  @include respond("max-width: 879px") {
+    margin-left: 16px;
+  }
+
+  @include respond("max-width: 871px") {
+    margin-left: 14px;
+  }
+
+  @include respond("max-width: 841px") {
+    margin-left: 12px;
+  }
+
+  @include respond("max-width: 838px") {
+    margin-left: 10px;
+  }
+    @include respond("max-width: 809px") {
+    margin-left: 8px;
+  }
+  @include respond("max-width: 806px") {
+    margin-left: 6px;
+  }
+  @include respond("max-width: 784px") {
+  	margin-left: 4;
+  }
+
+  .text-size-heading {
+    color: $color-text-size;
+    float: left;
+  }
+
+  span {
+    float: left;
+  }
+
+  .text-size-char-container {
+	  float: left;
+    display: block;
+	  height: 25px;
+	  //width: 75px;
+
+    div {
+      float: left;
+      height: 17px;
+      //width: 30px;
+      margin-top: 4px;
+      @include padding-left-right(7px);
+
+      @include respond("max-width: 977px") {
+        @include padding-left-right(6px);	
+      }
+
+      @include respond("max-width: 838px") {
+        @include padding-left-right(5px);	
+      }
+      
+      @include respond("max-width: 784px") {
+        @include padding-left-right(4px);	
+      }
+
+      &.normal {
+        border-right: 1px solid $body-border-color;
+    	  line-height: 18px;
+      }
+
+      &.medium {
+        border-right: 1px solid $body-border-color;
+    	  font-size: 16px;
+
+    	  span {
+    	    //margin-top: -1px;
+    	    line-height: 17px;
+    	  }
+      }
+
+      &.large {
+        font-size: 18px;
+    
+    	  span {
+    	    //margin-top: -2px;
+    	    line-height: 15px;
+    	  }
+      }
+    } // div for char
+  } // text-size-container
+
+  @include respond(all-phones) {
+    display: none;
+  }
+} // text-size
+
+#nav-mobile {
+  display: none;
+
+  @include respond(all-phones) {
+  	float: right;
+    position: relative; 
+    display: block; 
+    width: 25%; 
+    //margin-bottom: 10px;
+    padding-right: 10px;
+
+    #nav-icon {
+      float: right;
+      padding: 10px 12px;
+      border-radius: 8px;
+      behavior: url(js/libs/PIE.htc); // for border radius in IE8
+      background-color: $color-get-quotes;
+      color: #fff;
+      font-size: $larger;
+      cursor: pointer;
+    }
+  }
+
+  @include respond("max-width: 560px") {
+  	padding-right: 10px;
+  }
+} // nav-mobile
+
+.nav-main {
+  @include hybrid(15);
+  @include pull(1, hybrid);
+  margin-left: 0;
+
+  ul {
+    float: right;
+	margin-bottom: 0;
+
+    li {
+      display: inline;
+      padding-bottom: 0;
+      border-right: 1px solid $body-border-color;
+
+      @include respond(all-phones) {
+    		width: 100%;
+    		display: block;
+    		border-right: none;
+    		@include padding-top-bottom($padding-nav-mobile);
+    		border-top: 1px solid $body-border-color;
+    		text-align: center;
+  	  }
+
+      a {
+        display: inline-block;
+	      margin-right: -.26em;
+  	    @include padding-left-right($padding-nav-a); // 22px
+  	    text-decoration: none;
+
+  	    @include respond("max-width: 975px") {
+  	      @include padding-left-right($padding-nav-a - 2px); // 20px
+  	    } 
+  	    @include respond("max-width: 939px") {
+  	      @include padding-left-right($padding-nav-a - 4px); // 18px
+  	    }
+  	    @include respond("max-width: 903px") {
+  	      @include padding-left-right($padding-nav-a - 6px); // 16px
+  	    }
+  	    @include respond("max-width: 867px") {
+  	      @include padding-left-right($padding-nav-a - 8px); // 14px
+  	    }
+  	    @include respond("max-width: 832px") {
+  	      @include padding-left-right($padding-nav-a - 10px); // 12px
+  	    }
+  	    @include respond("max-width: 796px") {
+  	      @include padding-left-right($padding-nav-a - 12px); // 10px
+  	    }
+  	    @include respond(all-phones) {
+  	  	  width: 100%;
+  	  	  line-height: $height-nav-mobile-button; // same height as nav button
+  	  	  font-size: 16px;
+  	    }
+      } // a
+
+      &.my-contacts {
+        a {
+          color: $color-my-contacts; 	
+        }
+        /*a:hover {
+          color: tint($color-my-contacts, 35%);
+        }*/
+      } // li.my-contacts
+
+      &.my-profile {
+        a {
+          color: $color-my-profile; 	
+        }
+        /*a:hover {
+          color: tint($color-my-profile, 35%);
+        }*/
+      } // li.my-profile
+
+      &.help {
+        a {
+          color: $color-help; 	
+        }
+        /*a:hover {
+          color: tint($color-help, 35%);
+        }*/
+      } // li.help
+
+      &.sign-out {
+        border-right: none;
+
+        a {
+          color: $color-sign-out; 	
+        }
+      } // li.sign-out
+    } // li
+
+    @include respond(all-phones) {
+      @include column(12);
+      display: none; // hide nav by default
+	  height: auto;  
+    }
+   } // ul
+} // nav-main

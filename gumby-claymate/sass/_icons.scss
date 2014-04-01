@@ -1,0 +1,26 @@
+/*
+  * _icons.scss
+  * SASS styling for WN icons
+  * Create Date: 03/27/2014
+  * Author: Edward G. Lee
+*/
+
+.icon-font {
+  display: inline-block;
+  font-family: $font-family-icon !important;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+.icon-font-get-quotes:before { @extend .icon-font; content: "\0041"; } // A
+.icon-font-recent-activity:before { @extend .icon-font; content: "\0042"; }
+.icon-font-endorse-or-cancel:before  { @extend .icon-font; content: "\0043"; }
+.icon-font-make-payments:before { @extend .icon-font; content: "\0044"; }
+.icon-font-access-policy-info:before { @extend .icon-font; content: "\0045"; } 
+.icon-font-access-claims-info:before { @extend .icon-font; content: "\0046"; }
+.icon-font-order-reports:before { @extend .icon-font; content: "\0047"; }
+.icon-font-view-manuals:before { @extend .icon-font; content: "\0048"; } // H

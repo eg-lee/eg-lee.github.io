@@ -19,7 +19,7 @@
 /* _settings.scss Default Gumby Settings Create Date: 03/10/2014 Author: Edward G. Lee
 */
 /* Modifed Variables
-================================================== $row-max-width $hybrid $font-family $base-font-size $body-font-color
+================================================== $row-max-width $hybrid $font-family $base-font-size $body-font-color $body-link-color $body-link-hover-color
 */
 /* Added Variables
 ================================================== $font-family-icon $font-family-locator-web $font-icon-regular $font-regular $font-regular-italic $font-medium $font-medium-italic $font-bold $font-bold-italic
@@ -42,9 +42,9 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-.header-row, .nav-row, .nav-row .nav-container, .main-row { *zoom: 1; }
-.header-row:before, .nav-row:before, .nav-row .nav-container:before, .main-row:before, .header-row:after, .nav-row:after, .nav-row .nav-container:after, .main-row:after { content: ""; display: table; }
-.header-row:after, .nav-row:after, .nav-row .nav-container:after, .main-row:after { clear: both; }
+.main-row, .header-row, .nav-row, .nav-row .nav-container { *zoom: 1; }
+.main-row:before, .header-row:before, .nav-row:before, .nav-row .nav-container:before, .main-row:after, .header-row:after, .nav-row:after, .nav-row .nav-container:after { content: ""; display: table; }
+.main-row:after, .header-row:after, .nav-row:after, .nav-row .nav-container:after { clear: both; }
 
 .header-row .logo-wn, .header-row .logo-ao, .welcome-user, .nav-main, .main-row .module-container { margin-left: 2.08333%; float: left; min-height: 1px; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
@@ -660,9 +660,9 @@ html, body { height: 100%; }
 
 @font-face { font-family: "Locator Web"; font-style: normal; font-weight: 700; src: url(../fonts/locator-web/eot/locator-web-bold.eot); src: url("../fonts/locator-web/eot/locator-web-bold.eot?#iefix") format("ie9-skip-eot"), url("../fonts/locator-web/woff/locator-web-bold.woff") format("woff"); }
 
-@font-face { font-family: "Locator Web"; font-style: italic; font-weight: 400; src: url(../fonts/locator-web/eot/locator-web-bold-italic.eot); src: url("../fonts/locator-web/eot/locator-web-bold-italic.eot?#iefix") format("ie9-skip-eot"), url("../fonts/locator-web/woff/locator-web-bold-italic.woff") format("woff"); }
+@font-face { font-family: "Locator Web"; font-style: italic; font-weight: 700; src: url(../fonts/locator-web/eot/locator-web-bold-italic.eot); src: url("../fonts/locator-web/eot/locator-web-bold-italic.eot?#iefix") format("ie9-skip-eot"), url("../fonts/locator-web/woff/locator-web-bold-italic.woff") format("woff"); }
 
-@font-face { font-family: "WN AO Icon Font"; font-style: normal; font-weight: 400; src: url(../fonts/icons/icomoon.eot); src: url("../fonts/icons/icomoon.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/icomoon.woff") format("woff"), url("../fonts/icons/icomoon.ttf") format("truetype"), url("../fonts/icons/icomoon.svg") format("svg"); }
+@font-face { font-family: "WN AO Icon Font"; font-style: normal; font-weight: 400; src: url(../fonts/icons/wn-ao-icon-font-regular.eot); src: url("../fonts/icons/wn-ao-icon-font-regular.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/wn-ao-icon-font-regular.woff") format("woff"), url("../fonts/icons/wn-ao-icon-font-regular.ttf") format("truetype"), url("../fonts/icons/wn-ao-icon-font-regular.svg") format("svg"); }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 { font-family: "Locator Web"; font-weight: 300; color: #444444; text-rendering: optimizeLegibility; padding-top: 0.312em; line-height: 1.32043em; padding-bottom: 0.312em; }
@@ -693,8 +693,8 @@ p { font-family: "Locator Web"; font-weight: 400; font-size: 14px; font-size: 1r
 p.lead { font-size: 17.5px; font-size: 1.25rem; margin-bottom: 18px; }
 @media only screen and (max-width: 768px) { p { font-size: 15.4px; font-size: 1.1rem; line-height: 1.85714em; } }
 
-a { color: #d04526; text-decoration: none; outline: 0; line-height: inherit; }
-a:hover { color: #c03d20; }
+a { color: #0081c3; text-decoration: none; outline: 0; line-height: inherit; }
+a:hover { color: #00a7e1; }
 
 /*=====================================================
  Lists  ======================================================*/
@@ -1627,7 +1627,7 @@ img { -ms-interpolation-mode: bicubic; }
   .navbar ul li.active .dropdown ul { position: relative; top: 0; background: #36393b; min-height: 50px; max-height: 250px; height: auto; overflow: auto; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
   .navbar ul li.active .dropdown ul li { min-height: 50px; border-bottom: #3e4043; }
   .navbar ul li.active .dropdown ul li a { color: white; border-bottom: 1px solid #313436; }
-  .navbar ul li.active .dropdown ul li a:hover { color: #d04526; } }
+  .navbar ul li.active .dropdown ul li a:hover { color: #0081c3; } }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) { .navbar > ul > li > .btn a { padding: 0 9px 0 9px !important; }
   .navbar ul > li .dropdown ul li.active .dropdown { left: -320px; } }
@@ -1651,12 +1651,12 @@ img { -ms-interpolation-mode: bicubic; }
   .navbar li .dropdown.active .dropdown ul { position: relative; top: 0; background: #36393b; min-height: 50px; max-height: 250px; height: auto; overflow: auto; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
   .navbar li .dropdown.active .dropdown ul li { min-height: 50px; border-bottom: #3e4043; }
   .navbar li .dropdown.active .dropdown ul li a { color: white; border-bottom: 1px solid #313436; }
-  .navbar li .dropdown.active .dropdown ul li a:hover { color: #d04526; } }
+  .navbar li .dropdown.active .dropdown ul li a:hover { color: #0081c3; } }
 
 .navbar li .dropdown ul { margin: 0; display: block; }
 .navbar li .dropdown ul > li { position: relative; display: block; width: 100%; float: left; text-align: left; height: auto; -webkit-border-radius: none; -moz-border-radius: none; -ms-border-radius: none; -o-border-radius: none; border-radius: none; }
 @media only screen and (min-width: 768px) and (max-width: 959px) { .navbar li .dropdown ul > li { max-width: 320px; word-wrap: break-word; } }
-.navbar li .dropdown ul > li a { display: block; padding: 0 20px; color: #d04526; border-bottom: 1px solid #cccccc; text-shadow: none; height: 45px; line-height: 43px; }
+.navbar li .dropdown ul > li a { display: block; padding: 0 20px; color: #0081c3; border-bottom: 1px solid #cccccc; text-shadow: none; height: 45px; line-height: 43px; }
 @media only screen and (max-width: 767px) { .navbar li .dropdown ul > li a { padding: 0 20px; } }
 .navbar li .dropdown ul > li .dropdown { display: none; background: white; }
 .navbar li .dropdown ul li:first-child a { -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
@@ -1669,7 +1669,7 @@ img { -ms-interpolation-mode: bicubic; }
 @media only screen and (max-width: 767px) { .gumby-no-touch .navbar ul li:hover .dropdown ul { overflow: auto; background: #36393b; }
   .gumby-no-touch .navbar ul li:hover .dropdown ul li { border-bottom: #3e4043; }
   .gumby-no-touch .navbar ul li:hover .dropdown ul li a { color: white; border-bottom: 1px solid #313436; }
-  .gumby-no-touch .navbar ul li:hover .dropdown ul li a:hover { color: #d04526; } }
+  .gumby-no-touch .navbar ul li:hover .dropdown ul li a:hover { color: #0081c3; } }
 
 .gumby-no-touch .navbar li .dropdown ul > li:hover .dropdown, .gumby-touch .navbar li .dropdown ul > li.active .dropdown { border-top: none; display: block; position: absolute; z-index: 9999; left: 100%; top: 0; margin-top: 0; }
 @media only screen and (max-width: 767px) { .gumby-no-touch .navbar li .dropdown ul > li:hover .dropdown, .gumby-touch .navbar li .dropdown ul > li.active .dropdown { position: relative; left: 0; }
@@ -1927,7 +1927,7 @@ label + .xnarrow:last-child, label + .narrow:last-child, label + .normal:last-ch
 .badge.warning a, .label.warning a { color: #644405; }
 .badge.success, .label.success { background: #58c026; border: 1px solid #58c026; }
 .badge.light, .label.light { background: #fff; color: #555555; border: 1px solid #f2f2f2; }
-.badge.light a, .label.light a { color: #d04526; }
+.badge.light a, .label.light a { color: #0081c3; }
 .badge.dark, .label.dark { background: #212121; border: 1px solid #212121; }
 
 .badge { padding: 0 10px; font-size: 14px; font-size: 1rem; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
@@ -2040,26 +2040,53 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 /* _custom.scss SASS styling for Agents Online Create Date: 03/10/2014 Author: Edward G. Lee
 */
 /* Contents
-================================================== Color For Development Media Query For Wide Screens Variables Mixins Icon Font Header Navigation Main Content Modules
+================================================== Color For Development Mixins Global Styles Partials
 */
 /* Color For Development
 ================================================== */
 /** { background: rgba(0,0,0,.05);
 }
-$color-structure-border: $body-font-color;
+$body-border-color: $body-font-color;
 */
-/* Media Query For Wide Screens
-================================================== */
-/* extend max-row-width for wide screens */
-/*@include respond("min-width: 1441px") {
-	$row-max-width: 1280px;
-}*/
-/* Variables
-================================================== */
 /* Mixins
 ================================================== */
-/* Icon Font
+/* _mixins.scss SASS mixins Create Date: 03/27/2014 Author: Edward G. Lee
+*/
+/* Global styles
 ================================================== */
+.max-width-wide-screen { max-width: 1320px !important; }
+
+/* extend max-row-width for wide screens */
+/*@include respond("min-width: 1441px") { //$row-max-width: 1280px;
+}*/
+.main-row { width: 100%; max-width: 1000px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+.main-row > *:first-child { margin-left: 0; }
+@media only screen and (max-width: 767px) { .main-row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
+
+a:active { color: #6ec4e8; }
+
+.page-heading-container { margin-bottom: 20px; border-bottom: 1px solid #d1d2d1; }
+
+.page-heading, .page-sub-heading, .page-sub-heading-inset-one { color: #00529f; font-size: 24px; font-weight: 700; }
+
+.page-sub-heading, .page-sub-heading-inset-one { font-size: 16px; text-transform: uppercase; }
+
+.page-sub-heading-inset-one { font-size: 14px; font-weight: 400; }
+
+.page-sub-heading-container, .page-sub-heading-container-inset-one { border-bottom: 1px solid #d1d2d1; margin-bottom: 10px; padding-left: 20px; padding-right: 20px; }
+
+.page-sub-heading-container-inset-one { padding-left: 40px; padding-right: 40px; }
+
+.page-content-container { padding-left: 20px; padding-right: 20px; }
+
+.page-table-container { padding-left: 10px; padding-right: 10px; }
+
+.page-table-container-inset-one { padding-left: 30px; padding-right: 30px; }
+
+/* Partials
+================================================== */
+/* _icons.scss SASS styling for WN icons Create Date: 03/27/2014 Author: Edward G. Lee
+*/
 .icon-font, .icon-font-get-quotes:before, .icon-font-recent-activity:before, .icon-font-endorse-or-cancel:before, .icon-font-make-payments:before, .icon-font-access-policy-info:before, .icon-font-access-claims-info:before, .icon-font-order-reports:before, .icon-font-view-manuals:before { display: inline-block; font-family: "WN AO Icon Font" !important; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 0; }
 
 .icon-font-get-quotes:before { content: "\0041"; }
@@ -2078,8 +2105,8 @@ $color-structure-border: $body-font-color;
 
 .icon-font-view-manuals:before { content: "\0048"; }
 
-/* Header
-================================================== */
+/* _header.scss SASS styling for header Create Date: 03/27/2014 Author: Edward G. Lee
+*/
 .header-row { width: 100%; max-width: 1000px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; margin-top: 10px; height: 85px; }
 .header-row > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { .header-row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
@@ -2096,8 +2123,8 @@ $color-structure-border: $body-font-color;
 @media only screen and (max-width: 767px) { .header-row .logo-ao { text-align: center; }
   .header-row .logo-ao p { text-align: center; } }
 
-/* Navigation
-================================================== */
+/* _nav.scss SASS styling for navigation bar Create Date: 03/27/2014 Author: Edward G. Lee
+*/
 .nav-remove-padding { padding-bottom: 0 !important; }
 
 .nav-add-margin { margin-top: 8px; }
@@ -2128,13 +2155,14 @@ $color-structure-border: $body-font-color;
 @media only screen and (max-width: 838px) { .text-size { margin-left: 10px; } }
 @media only screen and (max-width: 809px) { .text-size { margin-left: 8px; } }
 @media only screen and (max-width: 806px) { .text-size { margin-left: 6px; } }
-@media only screen and (max-width: 770px) { .text-size { margin-left: 4px; } }
+@media only screen and (max-width: 784px) { .text-size { margin-left: 4; } }
 .text-size .text-size-heading { color: #00a7e1; float: left; }
 .text-size span { float: left; }
 .text-size .text-size-char-container { float: left; display: block; height: 25px; }
 .text-size .text-size-char-container div { float: left; height: 17px; margin-top: 4px; padding-left: 7px; padding-right: 7px; }
 @media only screen and (max-width: 977px) { .text-size .text-size-char-container div { padding-left: 6px; padding-right: 6px; } }
 @media only screen and (max-width: 838px) { .text-size .text-size-char-container div { padding-left: 5px; padding-right: 5px; } }
+@media only screen and (max-width: 784px) { .text-size .text-size-char-container div { padding-left: 4px; padding-right: 4px; } }
 .text-size .text-size-char-container div.normal { border-right: 1px solid #d1d2d1; line-height: 18px; }
 .text-size .text-size-char-container div.medium { border-right: 1px solid #d1d2d1; font-size: 16px; }
 .text-size .text-size-char-container div.medium span { line-height: 17px; }
@@ -2144,7 +2172,7 @@ $color-structure-border: $body-font-color;
 
 #nav-mobile { display: none; }
 @media only screen and (max-width: 767px) { #nav-mobile { float: right; position: relative; display: block; width: 25%; padding-right: 10px; }
-  #nav-mobile #nav-icon { float: right; padding: 10px 12px; border-radius: 8px; background-color: #00529f; color: #fff; font-size: 30px; cursor: pointer; } }
+  #nav-mobile #nav-icon { float: right; padding: 10px 12px; border-radius: 8px; behavior: url(js/libs/PIE.htc); background-color: #00529f; color: #fff; font-size: 30px; cursor: pointer; } }
 @media only screen and (max-width: 560px) { #nav-mobile { padding-right: 10px; } }
 
 .nav-main { width: 61.71875%; margin-left: 0; }
@@ -2160,16 +2188,22 @@ $color-structure-border: $body-font-color;
 @media only screen and (max-width: 832px) { .nav-main ul li a { padding-left: 12px; padding-right: 12px; } }
 @media only screen and (max-width: 796px) { .nav-main ul li a { padding-left: 10px; padding-right: 10px; } }
 @media only screen and (max-width: 767px) { .nav-main ul li a { width: 100%; line-height: 45px; font-size: 16px; } }
+.nav-main ul li.my-contacts { /*a:hover { color: tint($color-my-contacts, 35%);
+}*/ }
 .nav-main ul li.my-contacts a { color: #00529f; }
+.nav-main ul li.my-profile { /*a:hover { color: tint($color-my-profile, 35%);
+}*/ }
 .nav-main ul li.my-profile a { color: #0081c3; }
+.nav-main ul li.help { /*a:hover { color: tint($color-help, 35%);
+}*/ }
 .nav-main ul li.help a { color: #00a7e1; }
 .nav-main ul li.sign-out { border-right: none; }
 .nav-main ul li.sign-out a { color: #48d2cb; }
 @media only screen and (max-width: 767px) { .nav-main ul { width: 100%; display: none; height: auto; } }
 @media only screen and (max-width: 767px) and (max-width: 767px) { .nav-main ul { float: left; margin-left: 0; width: 100%; } }
 
-/* Main Content
-================================================== */
+/* _portal.scss SASS styling for main portal Create Date: 03/27/2014 Author: Edward G. Lee
+*/
 .main-row { width: 100%; max-width: 1000px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
 .main-row > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { .main-row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
@@ -2180,13 +2214,11 @@ $color-structure-border: $body-font-color;
 .main-row .module-container { width: 44.70486%; }
 @media only screen and (max-width: 767px) { .main-row .module-container { float: left; margin-left: 0; width: 100%; } }
 
-/* Modules
-================================================== */
 .module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { margin-top: 30px; border-bottom: 1px solid #d1d2d1; /* modify default valign properties */ }
 @media only screen and (max-width: 767px) { .module, .module-one, .module-two, .module-three, .module-four, .module-five, .module-six, .module-seven, .module-eight { padding-bottom: 5px; } }
 .module .module-heading, .module-one .module-heading, .module-two .module-heading, .module-three .module-heading, .module-four .module-heading, .module-five .module-heading, .module-six .module-heading, .module-seven .module-heading, .module-eight .module-heading { font-size: 16px; }
-.module .module-icon, .module-one .module-icon, .module-two .module-icon, .module-three .module-icon, .module-four .module-icon, .module-five .module-icon, .module-six .module-icon, .module-seven .module-icon, .module-eight .module-icon { height: 90px; width: 90px; margin-left: -90px; border-radius: 10px; behavior: url(js/pie/PIE.htc); text-align: center; }
-.module .module-icon i:before, .module-one .module-icon i:before, .module-two .module-icon i:before, .module-three .module-icon i:before, .module-four .module-icon i:before, .module-five .module-icon i:before, .module-six .module-icon i:before, .module-seven .module-icon i:before, .module-eight .module-icon i:before { font-size: 48px; color: #fff; line-height: 96px; }
+.module .module-icon, .module-one .module-icon, .module-two .module-icon, .module-three .module-icon, .module-four .module-icon, .module-five .module-icon, .module-six .module-icon, .module-seven .module-icon, .module-eight .module-icon { height: 90px; width: 90px; margin-left: -90px; border-radius: 10px; behavior: url(js/libs/PIE.htc); text-align: center; }
+.module .module-icon i:before, .module-one .module-icon i:before, .module-two .module-icon i:before, .module-three .module-icon i:before, .module-four .module-icon i:before, .module-five .module-icon i:before, .module-six .module-icon i:before, .module-seven .module-icon i:before, .module-eight .module-icon i:before { font-size: 48px; color: #fff; line-height: 94px; }
 .module .module-valign, .module-one .module-valign, .module-two .module-valign, .module-three .module-valign, .module-four .module-valign, .module-five .module-valign, .module-six .module-valign, .module-seven .module-valign, .module-eight .module-valign { padding-left: 90px; height: auto; }
 .module .module-valign:before, .module-one .module-valign:before, .module-two .module-valign:before, .module-three .module-valign:before, .module-four .module-valign:before, .module-five .module-valign:before, .module-six .module-valign:before, .module-seven .module-valign:before, .module-eight .module-valign:before { height: 135px; /* modify height on screen width change, to keep module's inline */ }
 @media only screen and (max-width: 908px) { .module .module-valign:before, .module-one .module-valign:before, .module-two .module-valign:before, .module-three .module-valign:before, .module-four .module-valign:before, .module-five .module-valign:before, .module-six .module-valign:before, .module-seven .module-valign:before, .module-eight .module-valign:before { height: 150px; margin-top: 5px; } }
@@ -2234,3 +2266,30 @@ $color-structure-border: $body-font-color;
 .module-eight { border: 0; color: #00953a; }
 .module-eight .module-icon { background-color: #00953a; }
 .module-eight .module-list-actions li:before { color: #00953a; }
+
+/* _help.scss SASS styling for Help page Create Date: 03/27/2014 Author: Edward G. Lee
+*/
+.systems-availability-table { border: 0; }
+.systems-availability-table thead { background-color: #fff; color: #555555; }
+.systems-availability-table thead tr th { border-top: 0; font-size: 16px; }
+.systems-availability-table tbody tr td { border-top: 0; border-bottom: 1px solid #d1d2d1; padding-top: 5px; padding-bottom: 5px; }
+.systems-availability-table tbody tr td:first-child { font-weight: 500; }
+.systems-availability-table tbody tr:first-child { border-top: 1px solid #d1d2d1; }
+
+.help-ul-links li { padding-top: 5px; padding-bottom: 5px; border-bottom: 1px solid #d1d2d1; }
+
+/* _help.scss SASS styling for My Contacts page Create Date: 03/27/2014 Author: Edward G. Lee
+*/
+.contacts-table { border: 0; }
+.contacts-table thead { background-color: #fff; color: #555555; }
+.contacts-table thead tr th { border-top: 0; font-size: 16px; }
+.contacts-table tbody { /*tr:nth-of-type(even) { background-color: $color-blue-lighter; td:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; behavior: url(js/libs/PIE.htc); // for border radius in IE8 } td:last-child{ border-top-right-radius: 10px; border-bottom-right-radius: 10px; behavior: url(js/libs/PIE.htc); // for border radius in IE8 }
+}*/ }
+.contacts-table tbody tr td { border-top: 0; border-bottom: 1px solid #d1d2d1; width: 33.33%; padding-top: 5px; padding-bottom: 5px; }
+.contacts-table tbody tr td:first-child { font-weight: 400; }
+.contacts-table tbody tr td a { -ms-word-break: break-all; /* Be VERY careful with this, breaks normal words wh_erever */ word-break: break-all; /* Non standard for webkit */ word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; }
+
+.agency-tabs .tab-content { padding-left: 0; padding-right: 0; }
+.agency-tabs .tab-nav li { margin: 0 0 0 -3px; -o-text-overflow: ellipsis; /* Opera */ text-overflow: ellipsis; /* IE, Safari (WebKit) */ }
+.agency-tabs .tab-nav li a { border-radius: 10px 10px 0 0; font-weight: 500; behavior: url(js/libs/PIE.htc); }
+.agency-tabs .tab-nav li:first-child { margin-left: 1px; }

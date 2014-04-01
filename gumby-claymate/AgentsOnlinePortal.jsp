@@ -304,7 +304,7 @@
 	<!--
 	Include gumby.js followed by UI modules followed by gumby.init.js
 	Or concatenate and minify into a single file -->
-	<script gumby-touch="js/libs" src="bower_components/gumby/js/libs/gumby.js"></script>
+	<!--<script gumby-touch="js/libs" src="bower_components/gumby/js/libs/gumby.js"></script>
 	<script src="bower_components/gumby/js/libs/ui/gumby.retina.js"></script>
 	<script src="bower_components/gumby/js/libs/ui/gumby.fixed.js"></script>
 	<script src="bower_components/gumby/js/libs/ui/gumby.skiplink.js"></script>
@@ -314,8 +314,8 @@
 	<script src="bower_components/gumby/js/libs/ui/gumby.tabs.js"></script>
 	<script src="bower_components/gumby/js/libs/ui/gumby.navbar.js"></script>
 	<script src="bower_components/gumby/js/libs/ui/jquery.validation.js"></script>
-	<script src="bower_components/gumby/js/libs/gumby.init.js"></script>
-	<!--<script src="js/libs/gumby.min.js"></script>-->
+	<script src="bower_components/gumby/js/libs/gumby.init.js"></script>-->
+	<script src="js/libs/gumby.min.js"></script>
 	<script src="js/agents-online-responsive.js"></script>
 	<script src="js/libs/respond.min.js"></script>
 

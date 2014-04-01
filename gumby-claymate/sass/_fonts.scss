@@ -70,7 +70,7 @@
 @font-face {
   font-family: '#{$font-family-locator-web}';
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   src: url(../fonts/locator-web/eot/#{$font-bold-italic}.eot);
   src: url('../fonts/locator-web/eot/#{$font-bold-italic}.eot?#iefix') format('ie9-skip-eot'),
        url('../fonts/locator-web/woff/#{$font-bold-italic}.woff') format('woff');//,
@@ -80,11 +80,11 @@
   font-family: '#{$font-family-icon}';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/icons/icomoon.eot);
-  src: url('../fonts/icons/icomoon.eot?#iefix') format('ie9-skip-eot'),
-       url('../fonts/icons/icomoon.woff') format('woff'),
-       url('../fonts/icons/icomoon.ttf')  format('truetype'),
-       url('../fonts/icons/icomoon.svg')  format('svg');
+  src: url(../fonts/icons/#{$font-icon-regular}.eot);
+  src: url('../fonts/icons/#{$font-icon-regular}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/icons/#{$font-icon-regular}.woff') format('woff'),
+       url('../fonts/icons/#{$font-icon-regular}.ttf')  format('truetype'),
+       url('../fonts/icons/#{$font-icon-regular}.svg')  format('svg');
 }
 
 
